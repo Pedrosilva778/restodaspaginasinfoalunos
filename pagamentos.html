@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoAlunos - Privacidade</title>
+  <style>
+  :root {
+    --cor-primaria: #3399ff;
+    --cor-secundaria: white;
+    --cor-terciaria: #003d7a;
+    --cor-cinzento: #6c757d;
+    --cor-verde: #198754;
+    --cor-vermelho: #dc3545;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--cor-secundaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+  }
+
+  .header {
+    background: linear-gradient(90deg, var(--cor-terciaria), var(--cor-primaria));
+    color: var(--cor-secundaria);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-header {
+  max-height: 48px;
+  height: auto;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+  .header-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .language-selector {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria);
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 240px;
+    background-color: var(--cor-cinzento);
+    padding-top: 20px;
+    flex-shrink: 0;
+    height: auto;
+  }
+
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .menu > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+  }
+
+  .menu > ul > li:hover > a {
+    background-color: var(--cor-terciaria);
+  }
+
+  .menu li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--cor-secundaria);
+    min-width: 220px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .menu li:hover ul {
+    display: block;
+  }
+
+  .menu li ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .menu li ul li a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+  }
+
+  .arrow {
+    font-size: 14px;
+    color: var(--cor-secundaria);
+  }
+
+  .bloco {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 24px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .conteudo {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .botao {
+    background-color: var(--cor-terciaria);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .botao:hover {
+    background-color: var(--cor-primaria);
+  }
+
+  .botao.vermelho {
+    background-color: var(--cor-vermelho);
+  }
+
+  .botao.vermelho:hover {
+    background-color: #a52838;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  ul li {
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+</style>
+
+</head>
+
+<body>
+  <header class="header">
+  <div class="header-left">
+    <img src="universidade.png" alt="Logo" class="logo-header" />
+    <div class="header-title">InfoAlunos - Serviço de Informação dos Alunos - v3.1.4</div>
+  </div>
+  <div class="header-right">
+    <select class="language-selector">
+      <option value="pt">PT | EN</option>
+    </select>
+    <img src="user.png" alt="User" class="user-profile" />
+  </div>
+</header>
+
+
+  <div class="container">
+   <nav class="menu">
+      <ul>
+        <li><a href="layout.html">Início <span class="arrow">º</span></a></li>
+
+        <li>
+          <a href="#">Geral <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="processos.html">Processos</a></li>
+            <li><a href="dados.html">Dados Pessoais</a></li>
+            <li><a href="privacidade.html">Privacidade</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Serviços <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="pagamentos.html">Pagamentos</a></li>
+            <li><a href="matriculas.html">Matrículas/Inscrições</a></li>
+            <li><a href="inscricao_em_turmas.html">Inscrição em Turmas</a></li>
+            <li><a href="requerimentos.html">Requerimentos</a></li>
+            <li><a href="cartao_universitario.html">Cartão Universitário</a></li>
+            <li><a href="sasuma_bolsas.html">SASUMa–Bolsas</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Concursos <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="candidaturas.html">Candidaturas</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Avaliação <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="pautas.html">Pautas</a></li>
+            <li><a href="reclamacao_nota.html">Reclamação de Nota</a></li>
+            <li><a href="inquetarios.html">Inquéritos</a></li>
+            <li><a href="resultados_inquetarios.html">Resultados de Inquéritos</a></li>
+            <li><a href="inquetario_raides.html">Inquérito RAIDES</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Creditações <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="lista_processos.html">Lista de Processos</a></li>
+            <li><a href="novo_processo.html">Novo Processo</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Documentos <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="academicos.html">Académicos</a></li>
+            <li><a href="declaracoes.html">Declarações</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Aula <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="calendarios.html">Calendários</a></li>
+            <li><a href="sumario.html">Sumário</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Disciplina <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="fichas.html">Fichas</a></li>
+            <li><a href="programas.html">Programas</a></li>
+            <li><a href="ficheiros.html">Ficheiros</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Curso <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="ficha_curricular.html">Ficha Curricular</a></li>
+            <li><a href="horarios.html">Horários</a></li>
+            <li><a href="historico_matriculas.html">Histórico de Matrículas/Inscrições</a></li>
+            <li><a href="historico_disciplinas_aprovadas.html">Histórico de Disciplinas Aprovadas</a></li>
+            <li><a href="transicao_bolonha.html">Transição para Bolonha</a></li>
+            <li><a href="plano_conclusao.html">Plano de Conclusão</a></li>
+            <li><a href="quadro_prescricao.html">Quadro de Prescrição</a></li>
+            <li><a href="atividades_academicas_aluno.html">Atividades Académicas do Aluno</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Instituição <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="estrutura_orgânica.html">Estrutura Orgânica</a></li>
+          </ul>
+        </li>
+
+        <li><a href="eleicoes.html">Eleições <span class="arrow">º</span></a></li>
+      </ul>
+    </nav>
+
+    <main style="flex: 1; background-color: #f0f0f0; width: 100%; padding: 32px 0;">
+  <div style="width: 100%; max-width: 100%; padding: 0 32px; box-sizing: border-box;">
+    <div style="background-color: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
+      <h2 style="color: var(--cor-terciaria); margin-bottom: 16px;">Gestão de Pagamentos - CET 2025/26</h2>
+
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px; font-size: 14px;">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <label>Ano Lectivo</label>
+          <select>
+            <option>2025/26</option>
+          </select>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <label>Situação de Pagamento</label>
+          <select>
+            <option>Por Pagar</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <p style="font-size: 14px; margin-bottom: 12px;"><strong>Total em Dívida:</strong> 487.95 EUR</p>
+
+      <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+        <thead>
+          <tr style="background-color: #f5f5f5; text-align: left;">
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">AL</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Refª MB</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Serviço</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Obs</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Data Emissão</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Data Lim.</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Data Pag.</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Valor</th>
+            <th style="padding: 8px; border-bottom: 1px solid #e6e6e6;">Pagar c/ Cartão de Crédito</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962504</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">4ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-12-31</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962505</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">5ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2026-01-31</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962506</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">6ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2026-02-28</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962507</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">7ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2026-03-31</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962508</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">8ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2026-04-30</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962509</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">9ª Prestação de Propinas de CET’s</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-09-19</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2026-05-31</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">69.70 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025/26</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">N 212962510</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">Juros de mora</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">Juros de mora - 3ª Prestação de Propinas de CET’s 0,048 Eur de 2025-12-01 a 2025-12-03 (3 dias) tx anual 8.309000%</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-12-03</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">2025-12-18</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"></td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">0.05 EUR</td>
+            <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><input type="checkbox"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px;">
+        <button class="botao">Iniciar Pagamento</button>
+        <button class="botao vermelho">Cancelar</button>
+      </div>
+
+      <div style="margin-top: 32px; font-size: 14px; line-height: 1.6;">
+        <h3 style="color: var(--cor-terciaria); margin-bottom: 8px;">Opção 1 - Pagamento via Multibanco - Pagamento de Serviços</h3>
+        <p>Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking.</p>
+        <p><strong>Processamento de Transações:</strong> NÃO IMEDIATO</p>
+        <ul>
+          <li>Tem de efectuar um pagamento de cada vez.</li>
+          <li>O processamento é efectuado pelo sistema todos os dias pelas 22h00, pelo que só depois deste processamento o InfoAlunos reflectirá a conta-corrente actual do Aluno.</li>
+        </ul>
+        <p><strong>Processo de Pagamento:</strong></p>
+        <ul>
+          <li>No Multibanco ou homebanking, seleccione "Pagamento de Serviços".</li>
+          <li>Como Entidade introduza <strong>20697</strong>, com referência, utilize a Refª MB acima listada.</li>
+        </ul>
+        <p><strong>Atenção - Data Limite de Pagamento Ultrapassada:</strong><br>
+          Se for ultrapassada a data limite de pagamento serão aplicados juros de mora à taxa legal em vigor.<br>
+          Depois do pagamento, e de forma automática, é criado um novo registo para pagamento com o valor dos juros de mora calculados.
+        </p>
+
+        <h3 style="color: var(--cor-terciaria); margin-top: 24px; margin-bottom: 8px;">Opção 2 - Pagamento via Cartão de Crédito</h3>
+        <p>Através da REDUNICRE, pode proceder aos pagamentos via Cartão de Crédito. Se quiser pode gerar um MBNet para usar esta modalidade.</p>
+        <p><strong>Processamento de Transações:</strong> IMEDIATO</p>
+        <ul>
+          <li>Pode pagar vários produtos de uma vez só.</li>
+          <li>Ao regressar ao InfoAlunos, terá imediatamente os seus dados actualizados.</li>
+        </ul>
+        <p><strong>Processo de Pagamento:</strong></p>
+        <ul>
+          <li>Na tabela desta página, clique nas linhas correspondentes, a coluna "Pagar via Cartão de Crédito".</li>
+          <li>Clique no botão "Iniciar Pagamento".</li>
+        </ul>
+        <p><strong>Atenção - Data Limite de Pagamento Ultrapassada:</strong><br>
+          Se for ultrapassada a data limite de pagamento serão aplicados juros de mora à taxa legal em vigor.<br>
+          Depois do pagamento, e de forma automática, é criado um novo registo para pagamento com o valor dos juros de mora calculados.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  </div>
+
+      <footer style="background-color: #f0f0f0; padding: 16px 32px; font-size: 13px; color: #333; border-top: 1px solid #ccc;">
+      <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px;">
+        <div>
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#" style="color: #003d7a; text-decoration: underline;">Proteção de Dados e Termos de Utilização</a>
+        </div>
+        <div>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410
+        </div>
+        <div>
+          Processado em 0.07 segundos - powered by Hydra framework
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoAlunos - Home</title>
+  <style>
+  :root {
+    --cor-primaria: #3399ff;
+    --cor-secundaria: white;
+    --cor-terciaria: #003d7a;
+    --cor-cinzento: #6c757d;
+    --cor-verde: #198754;
+    --cor-vermelho: #dc3545;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--cor-secundaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+  }
+
+  .header {
+    background: linear-gradient(90deg, var(--cor-terciaria), var(--cor-primaria));
+    color: var(--cor-secundaria);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo-header {
+    width: 90px;
+    height: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .language-selector {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria);
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 240px;
+    background-color: var(--cor-cinzento);
+    padding-top: 20px;
+    flex-shrink: 0;
+    height: auto;
+  }
+
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    position: relative;
+  }
+
+  .menu > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+  }
+
+  .menu > ul > li:hover > a {
+    background-color: var(--cor-terciaria);
+  }
+
+  .menu li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--cor-secundaria);
+    min-width: 220px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  .menu li:hover ul {
+    display: block;
+  }
+
+  .menu li ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .menu li ul li a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+  }
+
+  .arrow {
+    font-size: 14px;
+    color: var(--cor-secundaria);
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .menu {
+      width: 100%;
+      position: relative;
+      padding: 0;
+    }
+
+    .menu li ul {
+      position: relative;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      box-shadow: none;
+    }
+
+    .menu li:hover ul {
+      display: block;
+    }
+
+    .menu > ul > li > a {
+      padding: 12px 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-left {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .header-title {
+      font-size: 0.95rem;
+    }
+
+    .language-selector {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .user-profile {
+      width: 35px;
+      height: 35px;
+    }
+
+    .menu > ul > li > a {
+      font-size: 0.9rem;
+    }
+  }
+
+  .bloco {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .botao {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--cor-terciaria);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .botao:hover {
+    background-color: var(--cor-primaria);
+  }
+
+  .form-linha {
+    margin-bottom: 10px;
+  }
+
+  .form-linha label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+  }
+
+  .form-linha input,
+  .form-linha textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+    .botao {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--cor-terciaria);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .botao:hover {
+    background-color: var(--cor-primaria);
+  }
+</style>
+
+
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <img src="assets/img/logouni.png" alt="Logo" class="logo-header">
+      <div class="header-title">InfoAlunos - Serviço de Informação dos Alunos - v3.1.4</div>
+    </div>
+    <div class="header-right">
+      <select class="language-selector">
+        <option value="pt">PT | EN</option>
+      </select>
+      <img src="assets/img/user.png" alt="User" class="user-profile">
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Início <span class="arrow">º</span></a></li>
+        <li><a href="#">Geral <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Processos</a></li>
+            <li><a href="#">Dados Pessoais</a></li>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Ajuda</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Serviços <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">Matrículas/Inscrições</a></li>
+            <li><a href="#">Inscrição em Turmas</a></li>
+            <li><a href="#">Requerimentos</a></li>
+            <li><a href="#">Cartão Universitário</a></li>
+            <li><a href="#">SASUMa–Bolsas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Concursos <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Candidaturas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Avaliação <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Pautas</a></li>
+            <li><a href="#">Reclamação de Nota</a></li>
+            <li><a href="#">Inquéritos</a></li>
+            <li><a href="#">Resultados de Inquéritos</a></li>
+            <li><a href="#">Inquérito RAIDES</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Creditações <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Lista de Processos</a></li>
+            <li><a href="#">Novo Processo</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Documentos <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Académicos</a></li>
+            <li><a href="#">Declarações</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Aula <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Calendários</a></li>
+            <li><a href="#">Sumário</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Disciplina <span class="arrow">º</span></a>
+          <ul>
+            <li><a        <li><a href="#">Disciplina <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Fichas</a></li>
+            <li><a href="#">Programas</a></li>
+            <li><a href="#">Ficheiros</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Curso <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Ficha Curricular</a></li>
+            <li><a href="#">Horários</a></li>
+            <li><a href="#">Histórico de Matrículas/Inscrições</a></li>
+            <li><a href="#">Histórico de Disciplinas Aprovadas</a></li>
+            <li><a href="#">Transição para Bolonha</a></li>
+            <li><a href="#">Plano de Conclusão</a></li>
+            <li><a href="#">Quadro de Prescrição</a></li>
+            <li><a href="#">Atividades Académicas do Aluno</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Instituição <span class="arrow">º</span></a>
+          <ul>
+            <li><a href="#">Estrutura Orgânica</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Eleições <span class="arrow">º</span></a></li>
+      </ul>
+    </nav>
+
+
+
+<main style="flex: 1; background-color: #f0f0f0; padding: 0;">
+  <div style="max-width: 960px; margin: 0 auto; padding: 24px; display: grid; gap: 24px;">
+
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; position: relative; font-size: 14px; line-height: 1.6;">
+      <button class="botao">Guardar</button>
+      <h3 style="color: var(--cor-terciaria); margin-bottom: 12px;">Nome e Informação Biográfica</h3>
+      <div class="form-linha"><label>Nome Completo</label><input type="text" value="Pedro Afonso Côrte da Silva"></div>
+      <div class="form-linha"><label>Nome Abreviado</label><input type="text" value="Pedro Silva"></div>
+      <div class="form-linha"><label>Nomes Próprios</label><input type="text" value="Pedro Afonso"></div>
+      <div class="form-linha"><label>Apelidos</label><input type="text" value=""></div>
+      <div class="form-linha"><label>Data de Nascimento</label><input type="date" value="2007-06-29"></div>
+      <div class="form-linha"><label>Sexo</label><input type="text" value="Masculino"></div>
+      <div class="form-linha"><label>Estado Civil</label><input type="text" value="Solteiro"></div>
+      <div class="form-linha"><label>Naturalidade</label><textarea>Portugal (Região Autónoma da Madeira | Câmara de Lobos | Câmara de Lobos)</textarea></div>
+      <div class="form-linha"><label>Nacionalidade</label><input type="text" value="Portugal"></div>
+      <div class="form-linha"><label>Pai</label><input type="text" value="Mauricio Silva"></div>
+      <div class="form-linha"><label>Mãe</label><input type="text" value="Gorete Côrte"></div>
+      <div class="form-linha"><label>ALUNO Nº</label><input type="text" value="2129625"></div>
+    </div>
+
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; position: relative; font-size: 14px; line-height: 1.6;">
+      <button class="botao">Guardar</button>
+      <h3 style="color: var(--cor-terciaria); margin-bottom: 12px;">Documentos de Identificação</h3>
+      <div class="form-linha"><label>Número de Identificação Fiscal</label><input type="text" value="262471663"></div>
+      <div class="form-linha"><label>País de Emissão</label><input type="text" value="Portugal"></div>
+      <div class="form-linha"><label>Número de Identificação Civil</label><input type="text" value="15558997 OZX3"></div>
+      <div class="form-linha"><label>País de Emissão</label><input type="text" value="Portugal"></div>
+      <div class="form-linha"><label>Validade</label><input type="date" value="2027-02-27"></div>
+    </div>
+
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; position: relative; font-size: 14px; line-height: 1.6;">
+      <button class="botao">Guardar</button>
+      <h3 style="color: var(--cor-terciaria); margin-bottom: 12px;">Contactos</h3>
+      <div class="form-linha"><label>Número de telefone</label><input type="text" value=""></div>
+      <div class="form-linha"><label>Número de telemóvel</label><input type="text" value="936083606"></div>
+      <div class="form-linha"><label>Email Pessoal</label><input type="email" value="afonsocorte2007@gmail.com"></div>
+      <div class="form-linha"><label>Email Institucional</label><input type="email" value="2129625@student.uma.pt"></div>
+    </div>
+
+    <div style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; position: relative; font-size: 14px; line-height: 1.6;">
+      <button class="botao">Guardar</button>
+      <h3 style="color: var(--cor-terciaria); margin-bottom: 12px;">Morada de Correspondência</h3>
+      <div class="form-linha"><label>Nome</label><input type="text" value="Pedro Afonso Côrte da Silva"></div>
+      <div class="form-linha"><label>Morada</label><textarea>Estrada de Santa Clara ed Quintinha Ribeiro de Alforra BI D 2s</textarea></div>
+      <div class="form-linha"><label>Código Postal</label><input type="text" value="9300-163"></div>
+      <div class="form-linha"><label>Localidade</label><input type="text" value="CÂMARA DE LOBOS"></div>
+      <div class="form-linha"><label>País</label><input type="text" value="Portugal"></div>
+    </div>
+
+  </div>
+</main>
+
+
+
+  </div>
+</body>
+</html>

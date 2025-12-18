@@ -323,38 +323,40 @@
         <li><a href="eleicoes.html">Eleições <span class="arrow">º</span></a></li>
       </ul>
     </nav>
-
-    <main class="conteudo" style="width:100%; display:flex; flex-direction:column; align-items:center; padding:48px 24px; box-sizing:border-box; gap:48px;">
+<main class="conteudo" style="width:100%; display:flex; flex-direction:column; align-items:center; padding:48px 24px; box-sizing:border-box; gap:48px;">
 
   <div style="width:100%; max-width:1200px; background-color:#fff; border:1px solid #ccc; border-radius:8px; padding:24px 32px; box-shadow:0 2px 6px rgba(0,0,0,0.1); display:flex; gap:24px; align-items:flex-end;">
     <div style="flex:1;">
       <label for="concurso" style="display:block; font-size:14px; margin-bottom:4px;">Concurso</label>
       <select id="concurso" style="width:100%; padding:8px; font-size:14px; border:1px solid #ccc; border-radius:4px;">
-        <option value="" disabled selected>Selecionar...</option>
-        <option value="doutoramento-2025">2025/26 | Doutoramento 2025/26 | 1ª Fase</option>
-        <option value="microcredencial-seg-info">2025/26 | Microcredencial Segurança Informática 1 | 1ª Fase</option>
-      </select>
+  <option value="" disabled selected>Selecionar...</option>
+  <option value="doutoramento-2025">2025/26 | Doutoramento 2025/26 | 1ª Fase</option>
+  <option value="microcredencial-seg-info">2025/26 | Microcredencial Segurança Informática 1 | 1ª Fase</option>
+</select>
+
+
     </div>
     <div style="flex:1;">
       <label for="curso" style="display:block; font-size:14px; margin-bottom:4px;">Curso</label>
       <select id="curso" style="width:100%; padding:8px; font-size:14px; border:1px solid #ccc; border-radius:4px;">
-        <option value="" disabled selected>Selecionar...</option>
-        <option value="ciencias-biologicas">3º Ciclo | Ciências Biológicas</option>
-        <option value="engenharia-eletrotecnica">3º Ciclo | Engenharia Eletrotécnica</option>
-        <option value="engenharia-informatica">3º Ciclo | Engenharia Informática</option>
-        <option value="fisica">3º Ciclo | Física</option>
-        <option value="ilhas-atlanticas">3º Ciclo | Ilhas Atlânticas: História, Património e Quadro Jurídico-Institucional</option>
-        <option value="literaturas-culturas-insulares">3º Ciclo | Literaturas e Culturas Insulares</option>
-        <option value="quimica">3º Ciclo | Química</option>
-      </select>
+  <option value="" disabled selected>Selecionar...</option>
+  <option value="ciencias-biologicas">3º Ciclo | Ciências Biológicas</option>
+  <option value="engenharia-eletrotecnica">3º Ciclo | Engenharia Eletrotécnica</option>
+  <option value="engenharia-informatica">3º Ciclo | Engenharia Informática</option>
+  <option value="fisica">3º Ciclo | Física</option>
+  <option value="ilhas-atlanticas">3º Ciclo | Ilhas Atlânticas: História, Património e Quadro Jurídico-Institucional</option>
+  <option value="literaturas-culturas-insulares">3º Ciclo | Literaturas e Culturas Insulares</option>
+  <option value="quimica">3º Ciclo | Química</option>
+</select>
+
     </div>
-    <button class="botao" style="padding:10px 16px; font-size:14px;" onclick="filtrarTabela()">Pesquisar</button>
+    <button class="botao" style="padding:10px 16px; font-size:14px;">Pesquisar</button>
   </div>
 
   <div style="width:100%; max-width:1200px; background-color:#fff; border:1px solid #ccc; border-radius:8px; padding:32px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
     <h2 style="color:var(--cor-terciaria); font-size:20px; margin-bottom:32px;">Concursos de Doutoramento 2025/26</h2>
     <div style="overflow-x:auto;">
-      <table id="tabela-candidaturas" style="width:100%; border-collapse:collapse; font-size:14px;">
+      <table style="width:100%; border-collapse:collapse; font-size:14px;">
         <thead>
           <tr style="background-color:#f5f5f5; border-bottom:2px solid #ccc;">
             <th style="text-align:left; padding:12px;">Concurso</th>
@@ -367,12 +369,60 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-concurso="doutoramento-2025" data-curso="ciencias-biologicas"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Ciências Biológicas</td><td>10</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
-          <tr data-concurso="doutoramento-2025" data-curso="engenharia-eletrotecnica"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Engenharia Eletrotécnica</td><td>5</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
-          <tr data-concurso="doutoramento-2025" data-curso="engenharia-informatica"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Engenharia Informática</td><td>10</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
-          <tr data-concurso="doutoramento-2025" data-curso="fisica"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Física</td><td>5</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
-          <tr data-concurso="doutoramento-2025" data-curso="literaturas-culturas-insulares"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Literaturas e Culturas Insulares</td><td>10</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
-          <tr data-concurso="doutoramento-2025" data-curso="quimica"><td>Doutoramento 2025/26</td><td>1ª Fase</td><td>3º Ciclo</td><td>Química</td><td>10</td><td>De 2025-05-16 a 2026-06-11</td><td><a href="#">Preencher Candidatura</a></td></tr>
+          <tr style="border-top:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Ciências Biológicas</td>
+            <td style="padding:12px;">10</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
+          <tr style="border-top:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Engenharia Eletrotécnica</td>
+            <td style="padding:12px;">5</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
+          <tr style="border-top:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Engenharia Informática</td>
+            <td style="padding:12px;">10</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
+          <tr style="border-top:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Física</td>
+            <td style="padding:12px;">5</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
+          <tr style="border-top:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Literaturas e Culturas Insulares</td>
+            <td style="padding:12px;">10</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
+          <tr style="border-top:1px solid #ccc; border-bottom:1px solid #ccc;">
+            <td style="padding:12px;">Doutoramento 2025/26</td>
+            <td style="padding:12px;">1ª Fase</td>
+            <td style="padding:12px;">3º Ciclo</td>
+            <td style="padding:12px;">Química</td>
+            <td style="padding:12px;">10</td>
+            <td style="padding:12px;">De 2025-05-16 a 2026-06-11</td>
+            <td style="padding:12px;"><a href="#">Preencher Candidatura</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -400,28 +450,6 @@
 
 </main>
 
-<script>
-  function filtrarTabela() {
-    const concurso = document.getElementById('concurso').value;
-    const curso = document.getElementById('curso').value;
-    const linhas = document.querySelectorAll('#tabela-candidaturas tbody tr');
-
-    linhas.forEach(linha => {
-      const concursoLinha = linha.getAttribute('data-concurso');
-      const cursoLinha = linha.getAttribute('data-curso');
-
-      // Mostrar apenas as linhas que correspondem ao filtro
-      if (
-        (concurso === "" || concurso === concursoLinha) &&
-        (curso === "" || curso === cursoLinha)
-      ) {
-        linha.style.display = "";
-      } else {
-        linha.style.display = "none";
-      }
-    });
-  }
-</script>
 
 
 

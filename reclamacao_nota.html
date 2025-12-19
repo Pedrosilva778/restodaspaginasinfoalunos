@@ -280,7 +280,7 @@
             <li><a href="pautas.html">Pautas</a></li>
             <li><a href="reclamacao_nota.html">Reclamação de Nota</a></li>
             <li><a href="inqueritos.html">Inquéritos</a></li>
-            <li><a href="resultados_inqueritos.html">Resultados de Inquéritos</a></li>
+            <li><a href="resultado_inquerito.html">Resultados de Inquéritos</a></li>
             <li><a href="inquetario_raides.html">Inquérito RAIDES</a></li>
           </ul>
         </li>
@@ -342,71 +342,114 @@
         <li><a href="eleicoes.html">Eleições <span class="arrow">º</span></a></li>
       </ul>
     </nav>
-<main style="padding:40px; font-family:'Segoe UI','Roboto','Open Sans',sans-serif;">
+<main style="padding:40px; flex:1;">
 
-  <section style="width: 100%; background-color: var(--cor-secundaria); border: 1px solid var(--cor-cinzento); border-radius: 6px;">
+  <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria);">
 
-  <div style="display: flex; width: 100%;">
-    <div id="tab-lista" class="tab-header active" onclick="mostrarAba('lista')" style="width:50%; text-align:center;">
-      Lista de Requerimentos
-    </div>
-    <div id="tab-submeter" class="tab-header" onclick="mostrarAba('submeter')" style="width:50%; text-align:center;">
-      Submeter Novo/Detalhe
-    </div>
+    <details open>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-terciaria); color:var(--cor-secundaria); border-bottom:1px solid var(--cor-cinzento);">
+        Lista de Requerimentos
+      </summary>
+
+      <div style="padding:30px;">
+        <p style="margin-bottom:20px; font-size:0.95rem;">
+          Para inserir uma nova reclamação clique no tabulador <strong>Submeter Novo/Detalhe</strong>.
+        </p>
+
+        <div style="background:var(--cor-vermelho); color:var(--cor-secundaria); padding:10px 15px; border-radius:4px;">
+          ⚠ Sem resultados
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Submeter Novo/Detalhe
+      </summary>
+
+      <div style="padding:30px;">
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-bottom:30px;">
+
+          <div>
+            <label>Data do Despacho</label>
+            <input type="date" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Despacho</label>
+            <textarea style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea>
+
+            <label>Justificação</label>
+            <textarea style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea>
+
+            <label>Cód. Entrada</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Data Entrada</label>
+            <input type="date" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Origem</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Data de Afixação</label>
+            <input type="date" style="width:100%; padding:10px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+          </div>
+
+          <div>
+            <label>Ano Lectivo</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Disciplina</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Pauta</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Assunto</label>
+            <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Nº Aluno</label>
+            <input type="text" value="2129625" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Entidade</label>
+            <input type="text" value="Pedro Silva" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+
+            <label>Data do Pedido</label>
+            <input type="date" style="width:100%; padding:10px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+          </div>
+        </div>
+
+        <div style="display:flex; gap:15px; margin-bottom:30px;">
+          <button style="padding:10px 15px; border:1px solid var(--cor-cinzento); background:var(--cor-secundaria); cursor:pointer;">
+            Limpar Campos
+          </button>
+          <button style="padding:10px 15px; border:1px solid var(--cor-cinzento); background:var(--cor-secundaria); cursor:pointer;">
+            Cancelar Processo
+          </button>
+          <button style="padding:10px 15px; background:var(--cor-primaria); color:var(--cor-secundaria); border:none; cursor:pointer;">
+            Guardar Processo
+          </button>
+        </div>
+
+        <div>
+          <strong>Emolumentos do Processo</strong>
+          <div style="margin:10px 0 20px; color:var(--cor-cinzento);">
+            ⚠ Sem resultados
+          </div>
+
+          <strong>Histórico dos Estados do Processo</strong>
+          <div style="margin-top:10px; color:var(--cor-cinzento);">
+            ⚠ Sem resultados
+          </div>
+        </div>
+
+      </div>
+    </details>
+
   </div>
-
-  <div id="lista" class="tab-content">
-    <p style="margin-bottom: 20px;">
-      Para inserir uma nova reclamação clique no tabulador 'Submeter Novo/Detalhe'.
-    </p>
-    <div style="background-color: var(--cor-vermelho); color: var(--cor-secundaria); padding: 10px 15px; border-radius: 4px;">
-      ⚠️ Sem resultados
-    </div>
-  </div>
-
-  <div id="submeter" class="tab-content" style="display:none;">
-    <label>Data de Despacho</label>
-    <input type="date" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-
-    <label>Despacho</label>
-    <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-
-    <label>Justificação</label>
-    <textarea rows="3" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea>
-
-    <label>Ano Lectivo</label>
-    <select style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-      <option>2025/26</option>
-    </select>
-
-    <label>Disciplina</label>
-    <select style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-      <option>Desenvolvimento Web - Back-End_CTeSP_TPSI [ S2 ]</option>
-    </select>
-
-    <label>Pauta</label>
-    <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-
-    <label>Assunto</label>
-    <input type="text" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid var(--cor-cinzento); border-radius:4px;">
-  </div>
-
-</section>
 
 </main>
 
-<script>
-function mostrarAba(id) {
-  document.getElementById('lista').style.display = 'none';
-  document.getElementById('submeter').style.display = 'none';
 
-  document.getElementById('tab-lista').classList.remove('active');
-  document.getElementById('tab-submeter').classList.remove('active');
-
-  document.getElementById(id).style.display = 'block';
-  document.getElementById('tab-' + id).classList.add('active');
-}
-</script>
 
 
   </div>

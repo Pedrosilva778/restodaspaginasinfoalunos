@@ -205,6 +205,21 @@
         font-size: 0.9rem;
       }
     }
+   .btn-carregar {
+  height:32px;
+  padding:0 20px;
+  border:1px solid var(--cor-cinzento);
+  background-color:var(--cor-terciaria);
+  color:white;
+  cursor:pointer;
+  transition:background-color 0.3s;
+}
+
+.btn-carregar:hover {
+  background-color:var(--cor-primaria);
+}
+
+
   </style>
 </head>
 <body>
@@ -262,7 +277,7 @@
             <li><a href="reclamacao_nota.html">Reclamação de Nota</a></li>
             <li><a href="inqueritos.html">Inquéritos</a></li>
             <li><a href="resultado_inqueritos.html">Resultados de Inquéritos</a></li>
-            <li><a href="inquetario_raides.html">Inquérito RAIDES</a></li>
+            <li><a href="inqueritos_raides.html">Inquérito RAIDES</a></li>
           </ul>
         </li>
 
@@ -348,7 +363,7 @@
           <input type="text" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
         </div>
 
-        <button style="height:32px; padding:0 20px; border:1px solid var(--cor-cinzento); background:#f2f2f2; cursor:pointer;">
+        <button class="btn-carregar">
           Carregar
         </button>
       </div>
@@ -361,6 +376,7 @@
     </section>
   </div>
 </main>
+
 
 
 

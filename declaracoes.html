@@ -205,9 +205,9 @@
         font-size: 0.9rem;
       }
     }
-    .btn-pesquisar {
-  height:32px;
-  padding:0 20px;
+    .btn-emitir {
+  height:28px;
+  padding:0 16px;
   border:1px solid var(--cor-cinzento);
   background-color:var(--cor-terciaria);
   color:white;
@@ -216,12 +216,8 @@
   white-space:nowrap;
 }
 
-.btn-pesquisar:hover {
+.btn-emitir:hover {
   background-color:var(--cor-primaria);
-}
-
-.btn-direita {
-  margin-left:auto;
 }
 
   </style>
@@ -343,90 +339,67 @@
       </ul>
     </nav>
 
-  <main style="padding:40px; flex:1; display:flex; justify-content:center;">
-  <div style="width:100%; max-width:1200px;">
-    <section style="background:var(--cor-secundaria); border:1px solid var(--cor-cinzento); padding:15px 20px; margin-bottom:25px;">
-      <div style="font-weight:600; font-size:14px; margin-bottom:8px;">
+<main style="padding:60px; flex:1; display:flex; justify-content:flex-start;">
+  <div style="width:100%; max-width:1500px;">
+    <section style="background:var(--cor-secundaria); border:1px solid var(--cor-cinzento); padding:25px 30px; margin-bottom:35px;">
+
+      <div style="font-weight:600; font-size:18px; margin-bottom:15px;">
         2025/26 - CTeSP - Tecnologias e Programação de Sistemas de Informação
       </div>
-      <div style="font-size:13px; margin-bottom:15px;">
-        Avaliação / Inquérito RAIDES
-      </div>
-      <div style="font-size:13px; margin-bottom:20px;">
-        Este inquérito destina-se à recolha de dados, de acordo com as regras estabelecidas pela Direção-Geral de Estatísticas da Educação e Ciência, sendo de preenchimento obrigatório.
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:20px;">
+        Documentos / Declarações Sociais
       </div>
 
-      <div style="font-size:13px; margin-bottom:20px;">
-        Forma de ingresso: Titulares de curso do ensino secundário ou de habilitação legalmente equivalente (para acesso ao curso técnico superior profissional)
+      <div style="font-size:15px; margin-bottom:30px; line-height:1.5;">
+        A emissão dos documentos relativos às declarações sociais é imediata, sendo gerada pelo sistema de forma automática. Outro tipo de declarações devem ser solicitadas através do menu <strong>Serviços &gt; Requerimentos &gt; Submeter novo / Detalhe</strong>. Poderá também consultar documentos relativos a atos académicos através do menu <strong>Documentos &gt; Académicos</strong>.
       </div>
 
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações sobre o Ingresso
-      </div>
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:13px; margin-bottom:6px;">Ano Letivo de Ingresso</label>
-        <input type="text" value="2025/26" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-      </div>
-
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas à escolaridade completa mais elevada
-      </div>
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:13px; margin-bottom:6px;">Escolaridade mais elevada</label>
-        <select style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);">
-          <option selected>2025 - Ensino Secundário ou Equivalente (12º Ano Escolaridade) - Portugal</option>
-        </select>
+      <div style="display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; margin-bottom:20px;">
+        <div style="font-size:15px;">
+          Declaração de aproveitamento para fins sociais
+        </div>
+        <button disabled style="height:34px; padding:0 20px; border:1px solid var(--cor-cinzento); background-color:#ccc; color:#666; cursor:not-allowed; font-size:14px;">
+          Emitir
+        </button>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
+      <div style="display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; margin-bottom:35px;">
+        <div style="font-size:15px;">
+          Declaração de matrícula para fins sociais
+        </div>
+        <button class="btn-emitir" style="height:34px; padding:0 20px; font-size:14px;">
+          Emitir
+        </button>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:10px; background-color:#fff3cd; border:1px solid #ffeeba; padding:15px 18px; font-size:15px; color:#856404; margin-bottom:35px; line-height:1.5;">
+        <span style="font-weight:700;">⚠️</span>
+        <span>
+          Não é possível emitir a Declaração de aproveitamento para fins sociais. Só é possível emitir a declaração quando não tiver pagamentos em falta no ano letivo 2025/26.
+        </span>
+      </div>
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:20px;">
+        Histórico de Declarações Sociais Emitidas
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; font-size:15px; line-height:1.6;">
         <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Nível de escolaridade mais elevado</label>
-          <input type="text" value="Ensino secundário (12.º ano de escolaridade completo) ou equivalente" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+          <div style="font-weight:600; margin-bottom:6px;">DECLARAÇÃO</div>
+          Declaração de matrícula para fins sociais<br>
+          ano letivo 2025/26, curso de Curso Técnico Superior Profissional em TECNOLOGIAS E PROGRAMAÇÃO DE SISTEMAS DE INFORMAÇÃO
         </div>
         <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">País onde concluiu</label>
-          <input type="text" value="Portugal" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        </div>
-        <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Ano de conclusão</label>
-          <input type="text" value="2025" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        </div>
-        <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Tipo de estabelecimento</label>
-          <input type="text" value="Público" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+          <div style="font-weight:600; margin-bottom:6px;">DATA DE EMISSÃO</div>
+          2025-09-28
         </div>
       </div>
-
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas aos pais do aluno
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
-        <input type="text" value="Ensino Secundário ou Equivalente (12º Ano Escolaridade)" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Ensino Secundário ou Equivalente (12º Ano Escolaridade)" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Trabalhador por Conta de Outrem" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Trabalhador por Conta de Outrem" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Outro pessoal das Forças Armadas" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Outro pessoal das Forças Armadas" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-      </div>
-
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas ao aluno
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
-        <input type="text" value="Estudante" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Não Sabe / Não se Aplica" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Portugal" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Não" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-      </div>
-<button class="btn-pesquisar btn-direita">
-  Submeter inquérito
-</button>
-
-
 
     </section>
   </div>
 </main>
+
 
 
 

@@ -205,23 +205,18 @@
         font-size: 0.9rem;
       }
     }
-    .btn-pesquisar {
-  height:32px;
+   .btn-pesquisar {
+  height:34px;
   padding:0 20px;
   border:1px solid var(--cor-cinzento);
   background-color:var(--cor-terciaria);
   color:white;
   cursor:pointer;
-  transition:background-color 0.3s;
-  white-space:nowrap;
+  transition:0.2s;
 }
 
 .btn-pesquisar:hover {
   background-color:var(--cor-primaria);
-}
-
-.btn-direita {
-  margin-left:auto;
 }
 
   </style>
@@ -343,90 +338,111 @@
       </ul>
     </nav>
 
-  <main style="padding:40px; flex:1; display:flex; justify-content:center;">
-  <div style="width:100%; max-width:1200px;">
-    <section style="background:var(--cor-secundaria); border:1px solid var(--cor-cinzento); padding:15px 20px; margin-bottom:25px;">
-      <div style="font-weight:600; font-size:14px; margin-bottom:8px;">
-        2025/26 - CTeSP - Tecnologias e Programação de Sistemas de Informação
-      </div>
-      <div style="font-size:13px; margin-bottom:15px;">
-        Avaliação / Inquérito RAIDES
-      </div>
-      <div style="font-size:13px; margin-bottom:20px;">
-        Este inquérito destina-se à recolha de dados, de acordo com as regras estabelecidas pela Direção-Geral de Estatísticas da Educação e Ciência, sendo de preenchimento obrigatório.
+<main style="padding:60px; flex:1; display:flex; justify-content:flex-start;">
+  <div style="width:100%; max-width:1500px;">
+    <section style="background:var(--cor-secundaria); border:1px solid var(--cor-cinzento); padding:25px 30px;">
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:25px;">
+        Pesquisa de Disciplinas
       </div>
 
-      <div style="font-size:13px; margin-bottom:20px;">
-        Forma de ingresso: Titulares de curso do ensino secundário ou de habilitação legalmente equivalente (para acesso ao curso técnico superior profissional)
-      </div>
-
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações sobre o Ingresso
-      </div>
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:13px; margin-bottom:6px;">Ano Letivo de Ingresso</label>
-        <input type="text" value="2025/26" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-      </div>
-
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas à escolaridade completa mais elevada
-      </div>
-      <div style="margin-bottom:20px;">
-        <label style="display:block; font-size:13px; margin-bottom:6px;">Escolaridade mais elevada</label>
-        <select style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);">
-          <option selected>2025 - Ensino Secundário ou Equivalente (12º Ano Escolaridade) - Portugal</option>
-        </select>
-      </div>
-
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
+      <div style="display:flex; gap:20px; align-items:flex-end; margin-bottom:40px; font-size:15px;">
         <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Nível de escolaridade mais elevado</label>
-          <input type="text" value="Ensino secundário (12.º ano de escolaridade completo) ou equivalente" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+          <label style="display:block; margin-bottom:6px;">Ano Lectivo</label>
+          <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); min-width:180px;">
+            <option>2029/30</option>
+            <option>2028/29</option>
+            <option>2027/28</option>
+            <option>2026/27</option>
+            <option>2025/26</option>
+            <option>2024/25</option>
+            <option>2023/24</option>
+            <option>2022/23</option>
+            <option>2021/22</option>
+            <option>2020/21</option>
+            <option>2019/20</option>
+            <option>2018/19</option>
+            <option>2017/18</option>
+            <option>2016/17</option>
+            <option>2015/16</option>
+            <option>2014/15</option>
+            <option>2013/14</option>
+            <option>2012/13</option>
+            <option>2011/12</option>
+          </select>
         </div>
+
         <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">País onde concluiu</label>
-          <input type="text" value="Portugal" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+          <label style="display:block; margin-bottom:6px;">Disciplina</label>
+          <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); min-width:280px;">
+            <option>...</option>
+          </select>
         </div>
-        <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Ano de conclusão</label>
-          <input type="text" value="2025" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+
+        <button style="height:34px; padding:0 20px; border:1px solid var(--cor-cinzento); background-color:var(--cor-terciaria); color:white; cursor:pointer; transition:0.2s;" onmouseover="this.style.backgroundColor='var(--cor-primaria)'" onmouseout="this.style.backgroundColor='var(--cor-terciaria)'">
+          Pesquisar...
+        </button>
+      </div>
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:25px;">
+        Lista de Turma e Aulas
+      </div>
+
+      <div style="display:flex; gap:20px; align-items:flex-end; margin-bottom:30px; font-size:15px;">
+        <div style="flex:1;">
+          <label style="display:block; margin-bottom:6px;">Turmas</label>
+          <div style="height:34px; border:1px solid var(--cor-cinzento); background:white;"></div>
         </div>
-        <div>
-          <label style="display:block; font-size:13px; margin-bottom:6px;">Tipo de estabelecimento</label>
-          <input type="text" value="Público" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+
+        <div style="flex:1;">
+          <label style="display:block; margin-bottom:6px;">Aulas</label>
+          <div style="height:34px; border:1px solid var(--cor-cinzento); background:white;"></div>
+        </div>
+
+        <div style="align-self:flex-end;">
+          <button style="height:34px; padding:0 20px; border:1px solid var(--cor-cinzento); background-color:var(--cor-terciaria); color:white; cursor:pointer; transition:0.2s;" onmouseover="this.style.backgroundColor='var(--cor-primaria)'" onmouseout="this.style.backgroundColor='var(--cor-terciaria)'">
+            Carregar...
+          </button>
         </div>
       </div>
 
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas aos pais do aluno
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
-        <input type="text" value="Ensino Secundário ou Equivalente (12º Ano Escolaridade)" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Ensino Secundário ou Equivalente (12º Ano Escolaridade)" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Trabalhador por Conta de Outrem" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Trabalhador por Conta de Outrem" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Outro pessoal das Forças Armadas" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Outro pessoal das Forças Armadas" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:15px;">
+        Lista de Programa - Aula
       </div>
 
-      <div style="font-weight:600; font-size:13px; margin-bottom:10px;">
-        Informações relativas ao aluno
+      <div style="font-size:15px; margin-bottom:30px;">
+        Não existem tópicos associados ao programa. Selecione uma aula.
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:25px;">
-        <input type="text" value="Estudante" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Não Sabe / Não se Aplica" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Portugal" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
-        <input type="text" value="Não" style="width:100%; height:32px; padding:4px 8px; border:1px solid var(--cor-cinzento);" />
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:15px;">
+        Sumário - Tópicos
       </div>
-<button class="btn-pesquisar btn-direita">
-  Submeter inquérito
-</button>
 
+      <div style="font-size:15px; margin-bottom:30px;">
+        Não existem tópicos associados ao sumário. Selecione uma aula.
+      </div>
 
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:15px;">
+        Estado da Aula
+      </div>
+
+      <div style="font-size:15px; margin-bottom:30px;">
+        Selecione uma aula.
+      </div>
+
+      <div style="color:var(--cor-terciaria); font-weight:600; font-size:18px; margin-bottom:15px;">
+        Sumário - Dados
+      </div>
+
+      <div style="font-size:15px;">
+        Não existem dados associados ao sumário da aula!
+      </div>
 
     </section>
   </div>
 </main>
+
+
 
 
 

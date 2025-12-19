@@ -205,23 +205,7 @@
         font-size: 0.9rem;
       }
     }
-    .btn {
-  background-color: var(--cor-terciaria);
-  color: var(--cor-secundaria);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--cor-primaria);
-}
-
-
-
+    
   </style>
 </head>
 <body>
@@ -341,43 +325,51 @@
       </ul>
     </nav>
 
-<main style="padding: 40px; display: flex; flex-direction: column; align-items: flex-end; gap: 40px; font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;">
+  <main style="padding:40px; flex:1;">
 
-  <section style="width: 100%; max-width: 1200px; background-color: var(--cor-secundaria); border: 1px solid var(--cor-cinzento); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 30px;">
-    <div style="display: flex; align-items: flex-end; gap: 20px;">
-      <div style="flex: 1;">
-        <h2 style="margin-bottom: 10px; color: var(--cor-terciaria); font-size: 1.2rem;">Pesquisa de Disciplinas</h2>
-        <label for="ano">Anos Lectivos</label>
-        <select id="ano" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid var(--cor-cinzento); border-radius: 4px;">
-  <option>2029/30</option>
-  <option>2028/29</option>
-  <option>2027/28</option>
-  <option>2026/27</option>
-  <option selected>2025/26</option>
-  <option>2024/25</option>
-  <option>2023/24</option>
-  <option>2022/23</option>
-  <option>2021/22</option>
-  <option>2020/21</option>
-  <option>2019/20</option>
-  <option>2018/19</option>
-  <option>2017/18</option>
-  <option>2016/17</option>
-  <option>2015/16</option>
-  <option>2014/15</option>
-  <option>2013/14</option>
-  <option>2012/13</option>
+  <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria);">
+
+    <div style="padding:30px; font-size:0.95rem;">
+
+      <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem; margin-bottom:25px;">
+        Pesquisa de Disciplinas
+      </div>
+
+      <div style="display:flex; gap:20px; align-items:flex-end; margin-bottom:30px;">
+        <div>
+          <label style="display:block; margin-bottom:6px;">Ano Lectivo</label>
+          <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); border-radius:4px; min-width:180px;">
   <option>2011/12</option>
+  <option>2012/13</option>
+  <option>2013/14</option>
+  <option>2014/15</option>
+  <option>2015/16</option>
+  <option>2016/17</option>
+  <option>2017/18</option>
+  <option>2018/19</option>
+  <option>2019/20</option>
+  <option>2020/21</option>
+  <option>2021/22</option>
+  <option>2022/23</option>
+  <option>2023/24</option>
+  <option>2024/25</option>
+  <option>2025/26</option>
+  <option selected>2026/27</option>
+  <option>2027/28</option>
+  <option>2028/29</option>
+  <option>2029/30</option>
 </select>
 
+        </div>
 
-        <label for="disciplina">Disciplina</label>
-        <select id="disciplina" style="width: 100%; padding: 10px; border: 1px solid var(--cor-cinzento); border-radius: 4px;">
+        <div>
+          <label style="display:block; margin-bottom:6px;">Disciplina</label>
+         <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); border-radius:4px; min-width:320px;">
+  <option>Introdução à Programação_CTeSP_TPSI [ S1 ]</option>
   <option>Desenvolvimento Web - Back-End_CTeSP_TPSI [ S2 ]</option>
   <option>Desenvolvimento Web - Front-End_CTeSP_TPSI [ S2 ]</option>
   <option>Design Hipermédia_CTeSP_TPSI [ S1 ]</option>
   <option>Inglês Técnico_CTeSP_TPSI [ S2 ]</option>
-  <option>Introdução à Programação_CTeSP_TPSI [ S1 ]</option>
   <option>Matemática_CTeSP_TPSI [ S1 ]</option>
   <option>Programação Orientada por Objetos_CTeSP_TPSI [ S2 ]</option>
   <option>Sistemas Gestores de Bases de Dados I_CTeSP_TPSI [ S2 ]</option>
@@ -385,45 +377,172 @@
   <option>Técnicas de Expressão do Português_CTeSP_TPSI [ S1 ]</option>
 </select>
 
+        </div>
+
+        <button
+          style="height:34px; padding:0 20px; border:1px solid var(--cor-cinzento); border-radius:4px; background-color:var(--cor-terciaria); color:white; cursor:pointer;"
+          onmouseover="this.style.backgroundColor='var(--cor-primaria)'"
+          onmouseout="this.style.backgroundColor='var(--cor-terciaria)'"
+        >
+          Pesquisar...
+        </button>
       </div>
 
-      <button class="btn">Pesquisar...</button>
-    </div>
-
-    <div style="display: flex; align-items: flex-end; gap: 20px;">
-      <div style="flex: 1;">
-        <h2 style="margin-bottom: 10px; color: var(--cor-terciaria); font-size: 1.2rem;">Pesquisa de Avaliações</h2>
-        <label for="avaliacao">Tipo Avaliação</label>
-        <select id="avaliacao" style="width: 100%; padding: 10px; border: 1px solid var(--cor-cinzento); border-radius: 4px;">
-          <option disabled selected>Selecione...</option>
-        </select>
+      <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem; margin-bottom:10px;">
+        Lista de Disciplinas
       </div>
 
-      <button class="btn">Pesquisar...</button>
-    </div>
-  </section>
+      <div style="margin-bottom:10px;">
+        AL | Ano Lectivo &nbsp;&nbsp;&nbsp; ALP | Ano Lectivo do Plano &nbsp;&nbsp;&nbsp; S | Semestre
+      </div>
 
-  <section style="width: 100%; max-width: 1200px; background-color: var(--cor-secundaria); border: 1px solid var(--cor-cinzento); border-radius: 6px; padding: 20px;">
-    <h2 style="margin-bottom: 10px; color: var(--cor-terciaria); font-size: 1.2rem;">Lista de Pautas</h2>
-    <div style="background-color: var(--cor-vermelho); color: var(--cor-secundaria); padding: 10px 15px; border-radius: 4px; margin-bottom: 20px;">
-      ⚠ Selecione uma disciplina e/ou tipo de avaliação!
+      <div style="padding:10px; border:1px solid var(--cor-cinzento); border-radius:4px; background:white;">
+        2025/26 &nbsp;&nbsp;&nbsp; Introdução à Programação
+      </div>
+
     </div>
 
-    <h2 style="margin-bottom: 10px; color: var(--cor-terciaria); font-size: 1.2rem;">Alunos associados às pautas</h2>
-    <div style="background-color: var(--cor-vermelho); color: var(--cor-secundaria); padding: 10px 15px; border-radius: 4px; margin-bottom: 10px;">
-      ⚠ Selecione uma ou mais pautas!
+  </div>
+
+  <div style="max-width:1000px; margin:30px auto 0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria);">
+
+  <details open>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-terciaria); color:var(--cor-secundaria); border-bottom:1px solid var(--cor-cinzento);">
+      Objectivos da Disciplina
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      1. Identificar os diferentes ambientes de execução e conhecer os principais tipos de ferramentas utilizadas no desenvolvimento de software;<br>
+      2. Identificar as principais características das linguagens de programação;<br>
+      3. Desenvolver programas usando a linguagem de programação Java (ou outra);<br>
+      4. Conhecer e implementar os principais tipos de dados;<br>
+      5. Desenvolver e implementar um algoritmo;<br>
+      6. Analisar a eficiência de algoritmos;<br>
+      7. Conhecer e implementar os principais algoritmos de ordenação;<br>
+      8. Conhecer e implementar os principais algoritmos de pesquisa;
+
+      <details style="margin-top:30px;">
+        <summary style="padding:10px 0; font-weight:600; cursor:pointer; color:var(--cor-terciaria);">
+          Tradução em Inglês
+        </summary>
+        <div style="padding-top:10px;">
+          1. Identify the different execution environments and know the main types of tools used in software development;<br>
+          2. Identify the main characteristics of programming languages;<br>
+          3. Develop programs using the Java programming language (or other);<br>
+          4. Know and implement the main types of data;<br>
+          5. Develop and implement an algorithm;<br>
+          6. Analyse the efficiency of algorithms;<br>
+          7. Know and implement the main ordering algorithms;<br>
+          8. Know and implement the main search algorithms.
+        </div>
+      </details>
     </div>
-    <div style="background-color: var(--cor-cinzento); color: var(--cor-secundaria); padding: 10px 15px; border-radius: 4px;">
-      🔍 Sem resultados
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+      Critérios de Avaliação
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      Tipo de Classificação: Quantitativa (0-20)<br>
+      Metodologia de Avaliação: De acordo com o previsto para os Cursos Técnicos Superiores Profissionais.
+
+      <details style="margin-top:30px;">
+        <summary style="padding:10px 0; font-weight:600; cursor:pointer; color:var(--cor-terciaria);">
+          Tradução em Inglês
+        </summary>
+        <div style="padding-top:10px;">
+          Classification Type: Quantitative (0-20)<br>
+          Evaluation Methodology: In accordance with the expected for the Professional Higher Technical Courses.
+        </div>
+      </details>
     </div>
-  </section>
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+      Bibliografia
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      <strong>Bibliografia Principal:</strong><br>
+      Rocha, A. A. (2011). Estruturas de Dados e Algoritmos em Java. FCA.<br>
+      Sedgewick, R. (1998). Algorithms in C, Parts 1-4. Addison-Wesley.<br>
+      Sedgewick, R. (2002). Algorithms in C, Part 5. Addison-Wesley.<br><br>
+      <strong>Outras Fontes Bibliográficas / Documentos de Apoio:</strong><br>
+      ⚠ Sem resultados
+    </div>
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+      Programa Detalhado
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      1.1 - Iniciação à programação / Introduction to programming<br>
+      1.2 - Ambientes de computação e linguagens de programação / Computing environments and programming languages<br>
+      1.3 - Ferramentas de desenvolvimento de software / Software development tools<br>
+      2.1 - Introdução à linguagem de programação Python / Introduction to Python<br>
+      2.2 - Noções elementares: classe, atributo, método / Elementary notions: class, attribute, method<br>
+      2.3 - Tipos de dados primitivos / Primitive data types<br>
+      2.4 - Vetores e strings / Vectors and strings<br>
+      2.5 - Estruturas de controle / Control structures<br>
+      3.1 - Tipos de dados e estruturas de dados / Data types and data structures<br>
+      3.2 - Tipos primitivos vs estruturas de dados / Primitive types vs data structures<br>
+      3.4 - Tipo de dados estruturados: fila, pilha e lista / Structured data types: queue, stack, list<br>
+      4.1 - Algoritmos / Algorithms<br>
+      4.2 - Algoritmos e implementação / Algorithms and implementation<br>
+      4.3 - Complexidade de algoritmos / Algorithm complexity<br>
+      4.4 - Ordenação elementar: inserção, seleção, bubblesort / Basic sorting<br>
+      4.5 - Ordenação avançada: shellsort, heapsort, quicksort / Advanced sorting<br>
+      4.6 - Pesquisa: linear e binária / Search algorithms
+    </div>
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+      Outros Dados
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      Página Web: http://www.uma.pt/<br>
+      Atendimento: ⚠ Sem dados<br>
+      Tradução do Atendimento: ⚠ Sem dados<br>
+      Observações: ⚠ Sem dados<br>
+      Tradução das Observações: ⚠ Sem dados
+    </div>
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+      Corpo Docente
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      David Walter Figueira Jardim — Ensino teórico-prático — david.jardim@staff.uma.pt<br>
+      Pedro Miguel Casinhas Pereira de Mendonça — Ensino teórico-prático — pedro.mendonca@staff.uma.pt<br>
+      David Walter Figueira Jardim — Horas de Aplicação — david.jardim@staff.uma.pt<br>
+      Pedro Miguel Casinhas Pereira de Mendonça — Horas de Aplicação — pedro.mendonca@staff.uma.pt<br>
+      David Walter Figueira Jardim — Regência — david.jardim@staff.uma.pt<br>
+      David Walter Figueira Jardim — Responsável pelas Pautas — david.jardim@staff.uma.pt
+    </div>
+  </details>
+
+  <details>
+    <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento);">
+      Documentos
+    </summary>
+    <div style="padding:30px; font-size:0.95rem;">
+      ⚠ Não foram encontrados ficheiros para a selecção efectuada.<br><br>
+      [Gerir Ficheiros da Disciplina]
+    </div>
+  </details>
+
+</div>
+
 
 </main>
 
 
 
 
-
+    
   </div>
   <footer style="background-color: #f0f0f0; padding: 16px 32px; font-size: 13px; color: #333; border-top: 1px solid #ccc;">
       <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 8px;">

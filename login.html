@@ -92,29 +92,42 @@
     </style>
 </head>
 <body>
-    <main class="login-container">
+ <main class="login-container">
         
-        <h1 class="site-title">Aceda à sua conta</h1>
-        
-        <form>
-            <div class="form-group">
-                <label class="form-label" for="aluno">N.º de Aluno</label>
-                <input id="aluno" type="text" class="form-control" placeholder="N.º de Aluno" required>
-            </div>
+    <h1 class="site-title">Aceda à sua conta</h1>
+    
+    <form>
+        <div class="form-group">
+            <label class="form-label" for="aluno">N.º de Aluno</label>
+            <input id="aluno" type="text" class="form-control" placeholder="N.º de Aluno" required>
+        </div>
 
-            <div class="form-group">
-                <label class="form-label" for="password">Password</label>
-                <input id="password" type="password" class="form-control" placeholder="Password" required>
-            </div>
+        <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="Password" required>
+        </div>
 
-            <div class="error-message">
-                Não existe uma sessão ativa.
-            </div>
+        <div class="error-message">
+            Não existe uma sessão ativa.
+        </div>
 
-            <a href="layout.html" class="btn-login">Entrar</a>
+        <button type="button" class="btn-login" onclick="login()">Entrar</button>
 
-        </form>
+    </form>
 
-    </main>
+</main>
+<script>
+function login() {
+    const aluno = document.getElementById("aluno").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    if (aluno === "1234" && pass === "1234") {
+        window.location.href = "layout.html";
+    } else {
+        alert("Credenciais inválidas. Tente novamente.");
+    }
+}
+</script>
+
 </body>
 </html>

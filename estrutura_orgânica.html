@@ -340,142 +340,73 @@
       </ul>
     </nav>
 
-  <main class="conteudo" 
-      style="width:100%; display:flex; flex-direction:column; align-items:center; 
-             padding:48px 24px; box-sizing:border-box; gap:48px;">
+<main style="padding:40px; flex:1;">
+    <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria); padding:30px; font-size:0.95rem; display:flex; flex-direction:column; gap:32px;"> <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem;"> Pesquisa Instituições/Unidades da UMa </div> <div style="display:flex; flex-direction:column; gap:16px;"> <div> <label>Instituição/Unidade da UMa:</label><br> <select style="width:100%; max-width:600px; padding:6px 10px; border:1px solid var(--cor-cinzento); border-radius:4px;"> <option selected>Universidade da Madeira</option> <optgroup label="Faculdades"> <option>Faculdade de Artes e Humanidades</option> <option>Faculdade de Ciências da Vida</option> <option>Faculdade de Ciências Exatas e da Engenharia</option> <option>Faculdade de Ciências Sociais</option> </optgroup> <optgroup label="Escola Superior"> <option>Escola Superior de Saúde</option> <option>Escola Superior de Tecnologias e Gestão</option> </optgroup> <optgroup label="Centros de Competência"> <option>Centro de Artes e Humanidades</option> <option>Centro de Ciências da Vida</option> <option>Centro de Ciências Exatas e da Engenharia</option> <option>Centro de Ciências Sociais</option> <option>Centro de Tecnologias da Saúde</option> </optgroup> <optgroup label="Colégios"> <option>Colégio Politécnico da Sociedade do Conhecimento</option> <option>Colégio Universitário da Sociedade do Conhecimento</option> </optgroup> <optgroup label="Institutos"> <option disabled>Institutos</option> </optgroup> </select> </div> <div style="display:flex; gap:20px;"> <label><input type="checkbox" checked> Ver Sub-Instituições/Unidades</label> <label><input type="checkbox"> Ver Cargos/Pessoas</label> </div> <div> <button class="botao">Carregar</button> </div> <div style="text-align:right; font-size:0.85rem;"> <a href="#" style="color:var(--cor-terciaria); text-decoration:underline;">Ajuda/Help</a> </div> </div> <div style="font-weight:600; color:var(--cor-terciaria); margin-top:20px;"> Lista de Instituições/Unidades </div> <div> Universidade da Madeira <a href="#" style="color:var(--cor-terciaria); text-decoration:underline;">[Detalhe]</a> </div> <div style="font-size:0.85rem; color:var(--cor-cinzento);"> expandir lista | fechar lista
 
-  <div style="width:100%; max-width:1200px; background-color:#fff; border:1px solid #ccc; 
-              border-radius:8px; padding:32px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria); padding:30px; font-size:0.95rem; display:flex; flex-direction:column; gap:32px;">
 
-    <div class="card">
-
-      <div class="card-title" 
-           style="font-size:1.3rem; font-weight:bold; text-align:center; margin-bottom:1rem;">
-        Creditação de Formação
+    <details open>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-terciaria); color:var(--cor-secundaria); border-bottom:1px solid var(--cor-cinzento);">
+        Dados Gerais
+      </summary>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:16px;">
+        <div><label>Designação:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Sigla:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Cód. MCTES:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Data Início (AAAA-MM-DD):</label><input type="date" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Missão:</label><textarea rows="3" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea></div>
+        <div><label>Abrv:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Data Fim (AAAA-MM-DD):</label><input type="date" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div style="font-weight:600; color:var(--cor-terciaria); margin-top:20px;">Contactos da Instituição/Unidade</div>
+        <div><label>Tel:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Página Web:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Cod. Postal:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Morada:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>eMail:</label><input type="email" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Fax:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Localidade:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div style="font-weight:600; color:var(--cor-terciaria); margin-top:20px;">Dados da Instituição/Unidade em Inglês</div>
+        <div><label>Designação (EN):</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Abrv (EN):</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Missão (EN):</label><textarea rows="3" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea></div>
       </div>
+    </details>
 
-      <details open style="margin-bottom:2rem;">
-        <summary style="font-weight:bold; font-size:1rem; cursor:pointer; padding:0.5rem 0;">
-          Novo/Alterar
-        </summary>
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
-          <div>
-            <label>Ano Letivo (para escolha do Curso): <span style="color:red;">*</span></label><br>
-            <select style="width:100%; padding:0.4rem;">
-              <option>2025/26</option>
-            </select><br><br>
-
-            <label>Curso (a creditar): <span style="color:red;">*</span></label><br>
-            <select style="width:100%; padding:0.4rem;">
-              <option>CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
-            </select><br><br>
-
-            <label>Alterar Estado/Pedido:</label><br>
-            <input type="text" style="width:100%; padding:0.4rem;">
-          </div>
-
-          <div>
-            <label>Justificação Actual:</label><br>
-            <textarea style="width:100%; height:60px; padding:0.4rem;"></textarea><br><br>
-
-            <label>Justificação para alterar estado:</label><br>
-            <textarea style="width:100%; height:60px; padding:0.4rem;"></textarea>
-          </div>
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Cargos
+      </summary>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:16px;">
+        <div><label>Cargo:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><label>Nome:</label><input type="text" style="width:100%; padding:6px; border:1px solid var(--cor-cinzento); border-radius:4px;"></div>
+        <div><button class="botao">Filtrar...</button></div>
+        <div style="padding:12px; background-color:#f8d7da; color:#842029; border:1px solid #f5c2c7; border-radius:4px;">
+          Sem resultados. Selecione a instituição/unidade a editar.
         </div>
+      </div>
+    </details>
 
-        <div style="font-weight:bold; margin-bottom:0.5rem;">Formação Académica Original</div>
-        <table style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:1rem;">
-          <thead>
-            <tr style="background-color:var(--cor-cinzento); color:white;">
-              <th>Inst.</th><th>UCurr.</th><th>Área</th><th>Curso</th><th>Prog.</th><th>Nível</th>
-              <th>Class.</th><th>Out.</th><th>Unid.</th><th>Ano Letivo</th>
-              <th colspan="5">A Creditar (a preencher pelo Dir. Curso)</th>
-            </tr>
-            <tr>
-              <th colspan="10"></th>
-              <th>Área</th><th>Nível</th><th>Class.</th><th>ECTS</th><th>Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td colspan="15" style="text-align:center; padding:1rem;">⚠ Sem resultados</td></tr>
-          </tbody>
-        </table>
-
-        <div style="font-size:0.85rem; color:#a00; margin-bottom:2rem;">
-          "E": Formação Externa. Quando tem esta indicação a formação não é da Universidade da Madeira e deve ser verificada.
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Ficheiros
+      </summary>
+      <div style="padding:24px;">
+        <div style="padding:12px; background-color:#e2e3e5; color:#41464b; border:1px solid #d3d6d8; border-radius:4px;">
+          🔒 Não foram encontrados ficheiros para a seleção efetuada, escolha editar uma instituição.
         </div>
+      </div>
+    </details>
 
-        <div style="font-weight:bold; margin-bottom:0.5rem;">Formação Não Académica</div>
-        <table style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:2rem;">
-          <thead>
-            <tr style="background-color:var(--cor-cinzento); color:white;">
-              <th>Descrição</th><th>Prog.</th><th>Ano Letivo</th><th>Área</th><th>Nível</th><th>ECTS</th><th>Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td colspan="7" style="text-align:center; padding:1rem;">⚠ Sem resultados</td></tr>
-          </tbody>
-        </table>
-
-        <div style="font-weight:bold; margin-bottom:0.5rem;">Módulos/Trabalhos - RESERVADO AOS SERVIÇOS</div>
-        <table style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:2rem;">
-          <thead>
-            <tr style="background-color:var(--cor-cinzento); color:white;">
-              <th>Descrição</th><th>Prog.</th><th>Ano Letivo</th><th>Área</th><th>Nível</th><th>Class.</th><th>ECTS</th><th>Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td colspan="8" style="text-align:center; padding:1rem;">⚠ Sem resultados</td></tr>
-          </tbody>
-        </table>
-
-        <div style="margin-bottom:2rem;">
-          <label>Anexar Documento 1:</label><br>
-          <input type="file"><br>
-          <span style="font-size:0.85rem; color:var(--cor-cinzento);">Não foi escolhido nenhum ficheiro</span><br><br>
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Áreas
+      </summary>
+      <div style="padding:24px;">
+        <div style="padding:12px; background-color:#f8d7da; color:#842029; border:1px solid #f5c2c7; border-radius:4px;">
+          Sem resultados.
         </div>
-
-        <div style="text-align:right;">
-          <button class="botao">Guardar Processo</button>
-        </div>
-
-      </details>
-
-      <details>
-        <summary style="font-weight:bold; font-size:1rem; cursor:pointer; padding:0.5rem 0;">
-          Plano de Formação
-        </summary>
-        <div style="padding:1rem; border-top:1px solid var(--cor-cinzento);">
-          <div style="font-size:0.9rem; color:var(--cor-cinzento); padding:1rem; border:1px solid var(--cor-cinzento); border-radius:4px;">
-            <svg style="width:16px; height:16px; vertical-align:middle;"><use href="#icon-info"></use></svg>
-            Sem resultados. Selecione um processo de creditação.
-          </div>
-        </div>
-      </details>
-
-      <details>
-        <summary style="font-weight:bold; font-size:1rem; cursor:pointer; padding:0.5rem 0;">
-          Documentos e Histórico
-        </summary>
-        <div style="padding:1rem; border-top:1px solid var(--cor-cinzento);">
-
-          <div style="font-weight:bold; margin-bottom:0.5rem;">Histórico dos Estados do Processo</div>
-          <div style="font-size:0.9rem; color:var(--cor-cinzento); margin-bottom:1rem;">⚠ Sem resultados</div>
-
-          <div style="font-weight:bold; margin-bottom:0.5rem;">Emolumentos do Processo</div>
-          <div style="font-size:0.9rem; color:var(--cor-cinzento); margin-bottom:1rem;">⚠ Sem resultados</div>
-
-          <div style="font-weight:bold; margin-bottom:0.5rem;">Documentos Associados ao Processo</div>
-          <div style="font-size:0.9rem; color:var(--cor-cinzento); margin-bottom:2rem;">
-            <svg style="width:16px; height:16px; vertical-align:middle;"><use href="#icon-info"></use></svg>
-            Não foram encontrados ficheiros ou não seleccionou um processo.
-          </div>
-
-        </div>
-      </details>
-
-    </div>
+      </div>
+    </details>
 
   </div>
 

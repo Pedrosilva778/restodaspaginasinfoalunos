@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erro 404 - Página Não Encontrada</title>
+<style>
+:root{
+    --cor-primaria: #3399ff;
+    --cor-secundaria: white;
+    --cor-terciaria: #003d7a;
+    --cor-cinzento:#6c757d;
+    --cor-verde:#198754;
+    --cor-vermelho:#dc3545; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0eaff, #ffffff);
+    color: #333;
+}
+
+/* Container central */
+.error-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Número grande 404 */
+.error-container h1 {
+    font-size: 8rem;
+    color: var(--cor-vermelho);
+    margin-bottom: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Mensagem do erro */
+.error-container p {
+    font-size: 1.2rem;
+    color: var(--cor-terciaria);
+    margin-bottom: 30px;
+}
+
+/* Botão voltar */
+.error-container a {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.error-container a:hover {
+    background-color: var(--cor-terciaria);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Alerta de erro */
+.alerta-erro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background-color: var(--cor-vermelho);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.alerta-erro svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .error-container h1 {
+        font-size: 5rem;
+    }
+    .error-container p {
+        font-size: 1rem;
+    }
+    .error-container a {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    .alerta-erro svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="error-container">
+    <h1>404</h1>
+    <p>Oops! A página que você procura não existe ou foi removida.</p>
+    <a href="/">Voltar para a Página Inicial</a>
+</div>
+
+<!-- Ícones SVG escondidos -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-info" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm.93-8.588-1 4.3c-.07.3.03.5.3.5.2 0 .5-.07.7-.24l-.09.4c-.29.34-.92.6-1.46.6-.7 0-1-.4-.8-1.3l.74-3.17c.06-.3 0-.4-.29-.47l-.45-.08.08-.38 2.3-.3zM8 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </symbol>
+</svg>
+
+</body>
+</html>

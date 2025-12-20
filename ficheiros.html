@@ -205,6 +205,21 @@
         font-size: 0.9rem;
       }
     }
+    .botao {
+  background-color: var(--cor-terciaria);
+  color: var(--cor-secundaria);
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria);
+}
+
     
   </style>
 </head>
@@ -325,7 +340,7 @@
       </ul>
     </nav>
 
-  <main style="padding:40px; flex:1;">
+<main style="padding:40px; flex:1;">
 
   <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria);">
 
@@ -339,70 +354,123 @@
         <div>
           <label style="display:block; margin-bottom:6px;">Ano Lectivo</label>
           <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); border-radius:4px; min-width:180px;">
-            <option>2011/12</option>
-            <option>2012/13</option>
-            <option>2013/14</option>
-            <option>2014/15</option>
-            <option>2015/16</option>
-            <option>2016/17</option>
-            <option>2017/18</option>
-            <option>2018/19</option>
-            <option>2019/20</option>
-            <option>2020/21</option>
-            <option>2021/22</option>
-            <option>2022/23</option>
-            <option>2023/24</option>
-            <option>2024/25</option>
-            <option>2025/26</option>
             <option selected>2026/27</option>
-            <option>2027/28</option>
-            <option>2028/29</option>
-            <option>2029/30</option>
+            <option>2025/26</option>
+            <option>2024/25</option>
           </select>
         </div>
 
         <div>
           <label style="display:block; margin-bottom:6px;">Disciplina</label>
           <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); border-radius:4px; min-width:320px;">
-            <option>Introdução à Programação_CTeSP_TPSI [ S1 ]</option>
+            <option selected>Introdução à Programação_CTeSP_TPSI [ S1 ]</option>
             <option>Desenvolvimento Web - Back-End_CTeSP_TPSI [ S2 ]</option>
-            <option>Desenvolvimento Web - Front-End_CTeSP_TPSI [ S2 ]</option>
-            <option>Design Hipermédia_CTeSP_TPSI [ S1 ]</option>
-            <option>Inglês Técnico_CTeSP_TPSI [ S2 ]</option>
-            <option>Matemática_CTeSP_TPSI [ S1 ]</option>
-            <option>Programação Orientada por Objetos_CTeSP_TPSI [ S2 ]</option>
-            <option>Sistemas Gestores de Bases de Dados I_CTeSP_TPSI [ S2 ]</option>
-            <option>Sistemas Operativos e Redes_CTeSP_TPSI [ S1 ]</option>
-            <option>Técnicas de Expressão do Português_CTeSP_TPSI [ S1 ]</option>
           </select>
         </div>
 
-        <button
-          style="height:34px; padding:0 20px; border:1px solid var(--cor-cinzento); border-radius:4px; background-color:var(--cor-terciaria); color:white; cursor:pointer;"
-          onmouseover="this.style.backgroundColor='var(--cor-primaria)'"
-          onmouseout="this.style.backgroundColor='var(--cor-terciaria)'"
-        >
-          Pesquisar...
-        </button>
-      </div>
-
-      <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem; margin-bottom:10px;">
-        Lista de Disciplinas
-      </div>
-
-      <div style="margin-bottom:10px;">
-        AL | Ano Lectivo &nbsp;&nbsp;&nbsp; ALP | Ano Lectivo do Plano &nbsp;&nbsp;&nbsp; S | Semestre
-      </div>
-
-      <div style="padding:10px; border:1px solid var(--cor-cinzento); border-radius:4px; background:white;">
-        2026/27 &nbsp;&nbsp;&nbsp; Introdução à Programação
+        <button class="botao">Pesquisar...</button>
       </div>
 
     </div>
 
   </div>
 
+  <div style="max-width:1000px; margin:30px auto 0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria);">
+
+    <details open>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-terciaria); color:var(--cor-secundaria); border-bottom:1px solid var(--cor-cinzento);">
+        Ficheiros de Docentes na Disciplina
+      </summary>
+
+      <div style="padding:30px; font-size:0.95rem; display:flex; flex-direction:column; gap:24px;">
+        <div style="display:flex; gap:20px;">
+          <div style="flex:1;">
+            <label style="display:block; margin-bottom:6px;">Filtrar por Categoria</label>
+            <select style="height:34px; padding:4px 8px; border:1px solid var(--cor-cinzento); border-radius:4px; width:100%;">
+              <option selected>Todos</option>
+              <option>Apontamentos</option>
+              <option>Exercícios</option>
+              <option>Testes</option>
+              <option>Projetos</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <button class="botao" style="align-self:flex-end;">Filtrar Lista</button>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Gestão de Ficheiros
+      </summary>
+
+      <div style="padding:30px; font-size:0.95rem; display:flex; flex-direction:column; gap:24px;">
+
+        <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem;">
+          Criar/Actualizar Ficheiro
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div>
+            <label>Escolher ficheiro:</label><br>
+            <input type="file"><br>
+            <span style="font-size:0.85rem; color:var(--cor-cinzento);">Nenhum ficheiro selecionado</span>
+          </div>
+
+          <div>
+            <label>*Categoria</label><br>
+            <select style="width:100%; max-width:300px; padding:6px 10px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+              <option selected disabled>Selecionar...</option>
+              <option>Apontamentos</option>
+              <option>Exercícios</option>
+              <option>Testes</option>
+              <option>Projetos</option>
+              <option>Outros</option>
+            </select>
+          </div>
+
+          <div>
+            <label>*Descrição</label><br>
+            <input type="text" style="width:100%; max-width:600px; padding:6px 10px; border:1px solid var(--cor-cinzento); border-radius:4px;">
+          </div>
+
+          <div>
+            <label>Observações</label><br>
+            <textarea style="width:100%; max-width:600px; height:60px; padding:6px 10px; border:1px solid var(--cor-cinzento); border-radius:4px;"></textarea>
+          </div>
+
+          <div style="font-size:0.85rem; color:#dc3545;">
+            * Os campos assinalados são de preenchimento obrigatório;<br>
+            O ficheiro a enviar está limitado a 10 Mb.
+          </div>
+        </div>
+
+        <div style="display:flex; gap:12px;">
+          <button class="botao">Eliminar</button>
+          <button class="botao">Novo Ficheiro</button>
+          <button class="botao">Guardar</button>
+        </div>
+
+        <div style="font-weight:600; color:var(--cor-terciaria); font-size:1rem;">
+          Lista de ficheiros associados
+        </div>
+
+        <div style="padding:20px; border:1px solid var(--cor-cinzento); border-radius:4px; background:white; font-size:0.9rem; color:var(--cor-cinzento);">
+          ⚠ Não foram encontrados ficheiros para a seleção efetuada, escolha a disciplina!
+        </div>
+
+      </div>
+    </details>
+
+  </div>
+
 </main>
+
+
+
+
 
 
 

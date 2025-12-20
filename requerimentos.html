@@ -329,111 +329,214 @@
       </ul>
     </nav>
 
-<main class="conteudo" style="padding:0;margin:0;width:100%;">
-  <div class="bloco" style="width:100%;margin:0;padding:24px;box-sizing:border-box;">
+<main style="padding:40px; flex:1;">
 
-    <input type="radio" id="tab-lista" name="tabs" checked style="display:none;">
-    <input type="radio" id="tab-submeter" name="tabs" style="display:none;">
+  <div style="max-width:1000px; margin:0 auto; border:1px solid var(--cor-cinzento); border-radius:6px; background:var(--cor-secundaria); padding:30px; font-size:0.95rem; display:flex; flex-direction:column; gap:32px;">
 
-    <div class="tabs" style="display:flex;border-bottom:1px solid #ddd;width:100%;">
-      <label for="tab-lista" style="padding:12px 16px;cursor:pointer;color:var(--cor-terciaria);border:1px solid #ddd;border-bottom:none;border-top-left-radius:6px;border-top-right-radius:6px;background-color:#fff;margin-right:8px;">Lista de Requerimentos</label>
-      <label for="tab-submeter" style="padding:12px 16px;cursor:pointer;color:var(--cor-terciaria);border:1px solid #ddd;border-bottom:none;border-top-left-radius:6px;border-top-right-radius:6px;background-color:#f5f5f5;">Submeter Novo/Detalhe</label>
-    </div>
+    <details open>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-terciaria); color:var(--cor-secundaria); border-bottom:1px solid var(--cor-cinzento);">
+        Lista de Requerimentos
+      </summary>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:24px;">
 
-    <section data-tab="lista">
-      <h2 style="color:var(--cor-terciaria);font-size:20px;margin:16px 0;">Lista de Requerimentos</h2>
-      <p style="font-size:14px;margin-bottom:16px;">Para inserir um novo requerimento clique no tabulador <strong>Submeter Novo/Detalhe</strong>.</p>
+        <p style="font-size:14px;">Para inserir um novo requerimento clique no tabulador <strong>Submeter Novo/Detalhe</strong>.</p>
 
-      <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:16px;width:100%;">
-        <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
-          <label for="tipo-pedido" style="font-weight:600;">Filtrar por Tipo de Pedido</label>
-          <select id="tipo-pedido" style="padding:6px 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;width:100%;">
-            <option value="">-- Selecionar --</option>
-          </select>
-        </div>
+        <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;width:100%;">
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+            <label for="tipo-pedido" style="font-weight:600;">Filtrar por Tipo de Pedido</label>
+            <select id="tipo-pedido" style="padding:6px 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;width:100%;">
+  <option value="">-- Selecionar --</option>
+  <option>Adiamento de entrega de dissertação/tese/relatório de estágio (com justificação)</option>
+  <option>Alteração de Inscrição (por via de creditações)</option>
+  <option>Alteração de Propinas para 10 Prestações (Deliberação CG nº 152/2011)</option>
+  <option>Alteração do Estatuto a Tempo Integral/Parcial</option>
+  <option>Anulação de Inscrição em unidades curriculares singulares (Despacho 70/AA/R/2019)</option>
+  <option>Anulação de Matrícula/Inscrição</option>
+  <option>Anulação de Unidades Curriculares</option>
+  <option>Carta de agregação (Diploma)</option>
+  <option>Carta de curso: Grau de licenciado (Diploma)</option>
+  <option>Carta de curso: Grau de Mestre (Diploma)</option>
+  <option>Carta Doutoral (Diploma)</option>
+  <option>Certidão Aproveitamento (Trabalhador-Estudante)</option>
+  <option>Certidão de Aproveitamento Escolar, unidades curriculares realizadas</option>
+  <option>Certidão de Registo de Diploma de Curso Técnico Superior Profissional</option>
+  <option>Certidão de Registo de Grau</option>
+  <option>Certidão de Registo de Grau ou de Diploma de Curso Técnico Superior Profissional</option>
+  <option>Certificado Aproveitamento Escolar</option>
+  <option>Certificado de Aproveitamento Escolar</option>
+  <option>Certificado de Carga Horária e Programas de Unidades Curriculares Realizadas</option>
+  <option>Certificado de Conclusão de Ciclo de Estudos</option>
+  <option>Certificado de Conclusão de Ciclo de Estudos (Em Inglês)</option>
+  <option>Certificado de Conclusão de Ciclo de Estudos 1ª vez/sem Diploma</option>
+  <option>Certificado de Conclusão de Curso (2ª via) (50,00 euros)</option>
+  <option>Certificado de Conclusão de Curso Breve</option>
+  <option>Certificado de conclusão de cursos conferentes ou não de grau com o mínimo de 60 ECTS</option>
+  <option>Certificado de Inscrição, Matrícula ou Frequência</option>
+  <option>Certificado de Inscrição-Horário</option>
+  <option>Certificado de Matrícula</option>
+  <option>Certificado de Unidades Curriculares Aprovadas</option>
+  <option>Certificado de Unidades Curriculares Realizadas</option>
+  <option>Comprovativo de Nacionalidade</option>
+  <option>Declaração de aproveitamento para fins sociais, para estudantes inscritos em tese e/ou dissertação</option>
+  <option>Declarações Diversas</option>
+  <option>Declarações e Outros Não Especificados</option>
+  <option>Devolução de Documentos</option>
+  <option>Diploma de Conclusão</option>
+  <option>Diploma de Especialização Tecnológica</option>
+  <option>Diploma de Estudos Avançados</option>
+  <option>Entrega da dissertação/tese/relatório de estágio para defesa pública</option>
+  <option>Época de Recurso (por motivo imputável à UMa)</option>
+  <option>Época Especial - Abril - Cursos que terminam no 1º Semestre 2011/2012</option>
+  <option>Estatuto de Atleta Estudante (Dec-Lei nº 55/2019)</option>
+  <option>Estatuto de Mãe-Estudante (Lei nº 90/2001)</option>
+  <option>Estatuto de Trabalhador-Estudante</option>
+  <option>Fotocópias Autenticadas</option>
+  <option>Inscrição em exame - época especial (por motivo imputável à UMa)</option>
+  <option>Inscrição em Melhoria de Nota (por motivo imputável à UMa)</option>
+  <option>Inscrição de pagamento de propinas</option>
+  <option>Isenção de pagamento de propinas</option>
+  <option>Justificação de faltas com fundamentação (art.º 11.º do Reg. de Avaliação da UMa)</option>
+  <option>Medida de Apoio a Alunos com Necessidades Educativas Especiais (artº17º RAAUMA)</option>
+  <option>Melhoria em Ép Recurso (justificação de não inscrição por motivo imputável à UMa)</option>
+  <option>Outros Diplomas não conferentes de Grau</option>
+  <option>Pedido de admissão a provas de doutoramento</option>
+  <option>Pedido de exame de época especial</option>
+  <option>Pedido de Reembolso</option>
+  <option>Pedido de Revisão de Prova (Artigo 15º)</option>
+  <option>Programas/Plano de Estudos</option>
+  <option>Reclamação</option>
+  <option>Redução de Propinas (de acordo com o regulamento de propinas)</option>
+  <option>Regularização de Dívidas</option>
+  <option>Requerimento não especificado</option>
+  <option>Requerimentos não especificados</option>
+  <option>Suplemento ao diploma (2ª via)</option>
+</select>
 
-        <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
-          <label for="despacho" style="font-weight:600;">Filtrar por Despacho</label>
-          <select id="despacho" style="padding:6px 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;width:100%;">
-            <option value="">-- Selecionar --</option>
-          </select>
-        </div>
-
-        <div style="flex-shrink:0;">
-          <button class="botao">Filtrar Lista</button>
-        </div>
-      </div>
-
-      <h3 style="color:var(--cor-terciaria);font-size:16px;margin-bottom:8px;">Lista de Requerimentos</h3>
-      <div style="padding:16px;background-color:#f8f9fa;border-radius:4px;border:1px solid #ddd;font-size:14px;width:100%;">Sem resultados</div>
-    </section>
-
-    <section data-tab="submeter">
-      <h2 style="color:var(--cor-terciaria);font-size:20px;margin:16px 0;">Submeter Novo/Detalhe</h2>
-
-      <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;margin-bottom:24px;">
-        <legend style="font-weight:bold;color:var(--cor-terciaria);">Despacho</legend>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-          <div><label>Data do Despacho</label><input type="date" style="width:100%;"></div>
-          <div><label>Despacho</label><input type="text" style="width:100%;"></div>
-          <div><label>Justificação</label><input type="text" style="width:100%;"></div>
-          <div><label>Cod. Entrada</label><input type="text" style="width:100%;"></div>
-          <div><label>Data Entrada</label><input type="date" style="width:100%;"></div>
-          <div><label>Origem</label><input type="text" style="width:100%;"></div>
-          <div><label>Data de afixação</label><input type="date" style="width:100%;"></div>
-        </div>
-      </fieldset>
-
-      <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;margin-bottom:24px;">
-        <legend style="font-weight:bold;color:var(--cor-terciaria);">Pedido</legend>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-          <div><label>Curso</label><input type="text" style="width:100%;"></div>
-          <div><label>Ano Lectivo</label><input type="text" style="width:100%;"></div>
-          <div><label>Pedido</label><input type="text" style="width:100%;"></div>
-          <div><label>Assunto</label><input type="text" style="width:100%;"></div>
-          <div><label>Nº Aluno</label><input type="text" value="2129625" style="width:100%;" readonly></div>
-          <div><label>Entidade</label><input type="text" value="Pedro Afonso Côrte da Silva" style="width:100%;" readonly></div>
-          <div><label>Data do Pedido</label><input type="date" style="width:100%;"></div>
-          <div style="grid-column:1/-1;"><label>Observações</label><textarea rows="3" style="width:100%;"></textarea></div>
-          <div style="display:flex;align-items:center;gap:8px;">
-            <input type="checkbox" id="urgencia"><label for="urgencia">Taxa de Urgência</label>
           </div>
-          <div style="grid-column:1/-1;">
-            <label>Anexar Documento</label>
-            <input type="file">
+
+          <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+            <label for="despacho" style="font-weight:600;">Filtrar por Despacho</label>
+            <select id="despacho" style="padding:6px 8px;border:1px solid #ccc;border-radius:4px;font-size:13px;width:100%;">
+  <option value="">-- Selecionar --</option>
+  <option>1 do Despacho nº 104/R/07</option>
+  <option>Actas</option>
+  <option>Aguarda Análise</option>
+  <option>Aguarda Dados</option>
+  <option>Aprovado</option>
+  <option>Consultar a pág. dos maiores de 23 anos</option>
+  <option>Contactar Assuntos Académicos (UAA)</option>
+  <option>Contactar Departamento/Informática</option>
+  <option>Contactar Gabinete de Apoio ao Estudante</option>
+  <option>Contactar Sector Comunic.e Informática</option>
+  <option>Deferido</option>
+  <option>Deferido c/ Alterações</option>
+  <option>Deferido/Indeferido</option>
+  <option>Doc. a Levantar no Gabinete de Apoio ao Estudante</option>
+  <option>Doc. a levantar nos Assuntos Académicos</option>
+  <option>Doc. a Preencher e Levantar Balcão (UAA)</option>
+  <option>Doc. a Preencher e Levantar no Gabinete de Apoio ao Estudante</option>
+  <option>Documentos Entregues ao Aluno</option>
+  <option>Em Análise</option>
+  <option>Emitido(a)/Documento a levantar no Gabinete de Apoio ao Estudante</option>
+  <option>Emitido(a)/Enviado Expedição Correio</option>
+  <option>Emitido/Doc levantar no GE Internacional</option>
+  <option>Enviado para recuperação de dívida (Desp./Resol.)</option>
+  <option>Indeferido</option>
+  <option>Informar-se do parecer jurídico</option>
+  <option>Prorrogação de mestrados antes 2010/11</option>
+  <option>Resolvido</option>
+  <option>Sem direito a expedição por correio</option>
+  <option>Sem Efeito/Anulado</option>
+</select>
+
+          </div>
+
+          <div style="flex-shrink:0;">
+            <button class="botao">Filtrar Lista</button>
           </div>
         </div>
-      </fieldset>
 
-      <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;margin-bottom:24px;">
-        <legend style="font-weight:bold;color:var(--cor-terciaria);">Expedição por Correio</legend>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-          <div><label>País</label><input type="text" style="width:100%;"></div>
-          <div><label>Expedição</label><input type="text" style="width:100%;"></div>
-          <div><label>Morada</label><input type="text" style="width:100%;"></div>
-          <div><label>Código Postal</label><input type="text" style="width:100%;"></div>
-          <div><label>Localidade</label><input type="text" style="width:100%;"></div>
-        </div>
-      </fieldset>
-
-      <div style="display:flex;justify-content:flex-end;gap:8px;margin-bottom:32px;">
-        <button class="botao">Limpar Campos (Novo Pedido)</button>
-        <button class="botao vermelho">Cancelar Processo</button>
-        <button class="botao">Guardar Processo</button>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:24px;">
-        <div><h3 style="color:var(--cor-terciaria);font-size:16px;">Emolumentos do Processo</h3></div>
-        <div><h3 style="color:var(--cor-terciaria);font-size:16px;">Histórico dos Estados do Processo</h3></div>
         <div>
-          <h3 style="color:var(--cor-terciaria);font-size:16px;">Documentos Associados ao Processo</h3>
-          <p style="font-size:14px;">Não foram encontrados ficheiros ou não seleccionou um processo.</p>
+          <h3 style="color:var(--cor-terciaria);font-size:16px;">Lista de Requerimentos</h3>
+          <div style="padding:16px;background-color:#f8f9fa;border-radius:4px;border:1px solid #ddd;font-size:14px;">Sem resultados</div>
         </div>
+
       </div>
-    </section>
+    </details>
+
+    <details>
+      <summary style="padding:14px; font-weight:600; cursor:pointer; background:var(--cor-secundaria); color:var(--cor-terciaria); border-top:1px solid var(--cor-cinzento); border-bottom:1px solid var(--cor-cinzento);">
+        Submeter Novo/Detalhe
+      </summary>
+      <div style="padding:24px; display:flex; flex-direction:column; gap:32px;">
+
+        <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;">
+          <legend style="font-weight:bold;color:var(--cor-terciaria);">Despacho</legend>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div><label>Data do Despacho</label><input type="date" style="width:100%;"></div>
+            <div><label>Despacho</label><input type="text" style="width:100%;"></div>
+            <div><label>Justificação</label><input type="text" style="width:100%;"></div>
+            <div><label>Cod. Entrada</label><input type="text" style="width:100%;"></div>
+            <div><label>Data Entrada</label><input type="date" style="width:100%;"></div>
+            <div><label>Origem</label><input type="text" style="width:100%;"></div>
+            <div><label>Data de afixação</label><input type="date" style="width:100%;"></div>
+          </div>
+        </fieldset>
+
+        <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;">
+          <legend style="font-weight:bold;color:var(--cor-terciaria);">Pedido</legend>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div><label>Curso</label><input type="text" style="width:100%;"></div>
+            <div><label>Ano Lectivo</label><input type="text" style="width:100%;"></div>
+            <div><label>Pedido</label><input type="text" style="width:100%;"></div>
+            <div><label>Assunto</label><input type="text" style="width:100%;"></div>
+            <div><label>Nº Aluno</label><input type="text" value="2129625" style="width:100%;" readonly></div>
+            <div><label>Entidade</label><input type="text" value="Pedro Afonso Côrte da Silva" style="width:100%;" readonly></div>
+            <div><label>Data do Pedido</label><input type="date" style="width:100%;"></div>
+            <div style="grid-column:1/-1;"><label>Observações</label><textarea rows="3" style="width:100%;"></textarea></div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <input type="checkbox" id="urgencia"><label for="urgencia">Taxa de Urgência</label>
+            </div>
+            <div style="grid-column:1/-1;">
+              <label>Anexar Documento</label>
+              <input type="file">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset style="border:1px solid #ddd;border-radius:6px;padding:16px;">
+          <legend style="font-weight:bold;color:var(--cor-terciaria);">Expedição por Correio</legend>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+            <div><label>País</label><input type="text" style="width:100%;"></div>
+            <div><label>Expedição</label><input type="text" style="width:100%;"></div>
+            <div><label>Morada</label><input type="text" style="width:100%;"></div>
+            <div><label>Código Postal</label><input type="text" style="width:100%;"></div>
+            <div><label>Localidade</label><input type="text" style="width:100%;"></div>
+          </div>
+        </fieldset>
+
+        <div style="display:flex;justify-content:flex-end;gap:8px;">
+          <button class="botao">Limpar Campos (Novo Pedido)</button>
+          <button class="botao vermelho">Cancelar Processo</button>
+          <button class="botao">Guardar Processo</button>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <div><h3 style="color:var(--cor-terciaria);font-size:16px;">Emolumentos do Processo</h3></div>
+          <div><h3 style="color:var(--cor-terciaria);font-size:16px;">Histórico dos Estados do Processo</h3></div>
+          <div>
+            <h3 style="color:var(--cor-terciaria);font-size:16px;">Documentos Associados ao Processo</h3>
+            <p style="font-size:14px;">Não foram encontrados ficheiros ou não seleccionou um processo.</p>
+          </div>
+        </div>
+
+      </div>
+    </details>
 
   </div>
+
 </main>
+
 
 <style>
   section[data-tab]{display:none;}
@@ -444,14 +547,6 @@
   .bloco #tab-submeter:checked ~ .tabs label[for="tab-submeter"]{background-color:#fff;border-bottom:1px solid #fff;}
   .bloco #tab-submeter:checked ~ .tabs label[for="tab-lista"]{background-color:#f5f5f5;}
 </style>
-
-
-
-
-
-
-
-
 
   </div>
 

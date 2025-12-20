@@ -223,6 +223,20 @@
   padding:30px;
   width:100%;
 }
+ .botao {
+  background-color: var(--cor-terciaria);
+  color: var(--cor-secundaria);
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria);
+}
 
   </style>
 </head>
@@ -425,9 +439,8 @@
           <button style="padding:10px 15px; border:1px solid var(--cor-cinzento); background:var(--cor-secundaria); cursor:pointer;">
             Cancelar Processo
           </button>
-          <button style="padding:10px 15px; background:var(--cor-primaria); color:var(--cor-secundaria); border:none; cursor:pointer;">
-            Guardar Processo
-          </button>
+         
+          <button class="botao" > Guardar Processo</button>
         </div>
 
         <div>

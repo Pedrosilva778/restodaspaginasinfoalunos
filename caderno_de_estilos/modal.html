@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt‑PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popover com Botão Abrir</title>
+  <style>
+    :root {
+      --cor-primaria: #3399ff;
+      --cor-secundaria: white;
+      --cor-terciaria: #003d7a;
+      --cor-cinzento: #6c757d;
+      --cor-verde: #198754;
+      --cor-vermelho: #dc3545;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+      padding: 40px;
+      background-color: var(--cor-secundaria);
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: var(--cor-secundaria);
+      background-color: var(--cor-primaria);
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--cor-terciaria);
+    }
+
+   
+    dialog[popover] {
+      padding: 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--cor-secundaria);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    dialog[popover]::backdrop {
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .popover-confirmar {
+      padding: 10px 16px;
+      background-color: var(--cor-terciaria);
+      color: var(--cor-secundaria);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .popover-confirmar:hover {
+      background-color: var(--cor-primaria);
+    }
+
+    .popover-cancelar {
+      padding: 10px 16px;
+      background-color: var(--cor-vermelho);
+      color: var(--cor-secundaria);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: filter 0.2s;
+    }
+
+    .popover-cancelar:hover {
+      filter: brightness(0.9);
+    }
+  </style>
+</head>
+<body>
+
+
+  <button popovertarget="meu-popover" popovertargetaction="toggle">
+    Abrir Popover
+  </button>
+
+
+  <dialog popover id="meu-popover">
+    <h2>Popover</h2>
+    <p>Escolha uma ação:</p>
+    <div style="display: flex; gap: 10px;">
+      <button class="popover-confirmar">Confirmar</button>
+      <button class="popover-cancelar" popovertarget="meu-popover" popovertargetaction="hide">Cancelar</button>
+    </div>
+  </dialog>
+
+</body>
+</html>

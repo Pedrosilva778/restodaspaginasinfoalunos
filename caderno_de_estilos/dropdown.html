@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dropdown sem JS</title>
+<style>
+  :root {
+    --cor-primaria: #3399ff;
+    --cor-secundaria: white;
+    --cor-terciaria: #003d7a;
+    --cor-cinzento: #6c757d;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+    padding: 40px;
+  }
+
+  details summary {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    list-style: none; 
+  }
+
+  details[open] summary::after {
+    content: " ▴";
+  }
+
+  details summary::after {
+    content: " ▾";
+  }
+
+  details ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid var(--cor-cinzento);
+    border-radius: 4px;
+    background: var(--cor-secundaria);
+    width: 200px;
+  }
+
+  details ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+  }
+
+  details ul li a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <details>
+    <summary>Toggle Dropdown Menu</summary>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </details>
+</nav>
+
+</body>
+</html>

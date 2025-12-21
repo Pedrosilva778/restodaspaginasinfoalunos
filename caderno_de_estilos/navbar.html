@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Académico</title>
+  <style>
+    :root {
+      --cor-primaria: #3399ff;
+      --cor-secundaria: white;
+      --cor-terciaria: #003d7a;
+      --cor-cinzento: #6c757d;
+      --cor-verde: #198754;
+      --cor-vermelho: #dc3545;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+      font-size: 16px;
+      background-color: var(--cor-secundaria);
+    }
+
+    .menu {
+      width: 240px;
+      background-color: var(--cor-cinzento);
+      height: 100vh;
+      padding-top: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu > ul > li > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--cor-secundaria);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 0.3s;
+    }
+
+    .menu > ul > li:hover > a {
+      background-color: var(--cor-terciaria);
+    }
+
+    .menu li ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: var(--cor-secundaria);
+      min-width: 220px;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .menu li:hover ul {
+      display: block;
+    }
+
+    .menu li ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: var(--cor-terciaria);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .menu li ul li a:hover {
+      background-color: var(--cor-primaria);
+      color: var(--cor-secundaria);
+    }
+
+    .arrow {
+      font-size: 14px;
+      color: var(--cor-secundaria);
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu">
+  <ul>
+    <li><a href="#">Início <span class="arrow">º</span></a></li>
+    <li><a href="#">Geral <span class="arrow">º</span></a>
+      <ul>
+        <li><a href="#">Processos</a></li>
+        <li><a href="#">Dados Pessoais</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Ajuda</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Serviços <span class="arrow">º</span></a></li>
+    <li><a href="#">Concursos <span class="arrow">º</span></a></li>
+    <li><a href="#">Avaliação <span class="arrow">º</span></a></li>
+    <li><a href="#">Creditações <span class="arrow">º</span></a></li>
+    <li><a href="#">Documentos <span class="arrow">º</span></a></li>
+    <li><a href="#">Aula <span class="arrow">º</span></a></li>
+    <li><a href="#">Disciplina <span class="arrow">º</span></a></li>
+    <li><a href="#">Curso <span class="arrow">º</span></a>
+      <ul>
+        <li><a href="#">Ficha Curricular</a></li>
+        <li><a href="#">Horários</a></li>
+        <li><a href="#">Histórico de Matrículas/Inscrições</a></li>
+        <li><a href="#">Histórico de Disciplinas Aprovadas</a></li>
+        <li><a href="#">Transição para Bolonha</a></li>
+        <li><a href="#">Plano de Conclusão</a></li>
+        <li><a href="#">Quadro de Prescrição</a></li>
+        <li><a href="#">Actividades Académicas do Aluno</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Instituição <span class="arrow">º</span></a></li>
+    <li><a href="#">Eleições <span class="arrow">º</span></a></li>
+  </ul>
+</div>
+
+</body>
+</html>

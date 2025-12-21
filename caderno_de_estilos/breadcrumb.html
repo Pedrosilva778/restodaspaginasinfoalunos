@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+            padding: 20px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            display: flex;
+            gap: 6px;
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .breadcrumb li a {
+            text-decoration: none;
+            color: #0d6efd;
+        }
+
+        .breadcrumb li {
+            color: #6c757d;
+        }
+
+        .breadcrumb li::after {
+            content: "/";
+            margin-left: 6px;
+            color: #b0b0b0;
+        }
+
+        .breadcrumb li:last-child {
+            color: #6c757d;
+        }
+
+        .breadcrumb li:last-child::after {
+            content: "";
+        }
+    </style>
+
+</head>
+<body>
+
+<h3>Resultado:</h3>
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+    </ol>
+</nav>
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item">Library</li>
+    </ol>
+</nav>
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item">Data</li>
+    </ol>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs com cor primária</title>
+  <style>
+    :root{
+      --cor-primaria: #3399ff;
+      --cor-secundaria: white;
+      --cor-terciaria: #003d7a;
+      --cor-cinzento: #6c757d;
+      --cor-verde: #198754;
+      --cor-vermelho: #dc3545;
+      --cor-laranja: #ffa500;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', 'Open Sans', sans-serif;
+      background-color: var(--cor-cinzento);
+      padding: 40px;
+    }
+
+    .tabs {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .tab-labels {
+      display: flex;
+      border-bottom: 1px solid var(--cor-secundaria);
+    }
+
+    .tab-labels label {
+      flex: 1;
+      padding: 12px;
+      background-color: var(--cor-cinzento);
+      border-right: 1px solid var(--cor-secundaria);
+      cursor: pointer;
+      font-size: 16px;
+      color: var(--cor-secundaria);
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .tab-labels label:last-child {
+      border-right: none;
+    }
+
+    .tab-labels label:hover {
+      background-color: var(--cor-laranja);
+      color: var(--cor-secundaria);
+    }
+
+    /* Aba ativa com linha primária */
+    #tab1:checked ~ .tab-labels label[for="tab1"],
+    #tab2:checked ~ .tab-labels label[for="tab2"],
+    #tab3:checked ~ .tab-labels label[for="tab3"] {
+      background-color: var(--cor-secundaria);
+      color: var(--cor-terciaria);
+      font-weight: bold;
+      border-bottom: 3px solid var(--cor-primaria);
+    }
+
+    .tab-content {
+      border: 1px solid var(--cor-secundaria);
+      border-top: none;
+      background-color: var(--cor-secundaria);
+      padding: 20px;
+      color: var(--cor-terciaria);
+    }
+
+    .content {
+      display: none;
+    }
+
+    #tab1:checked ~ .tab-content .content1,
+    #tab2:checked ~ .tab-content .content2,
+    #tab3:checked ~ .tab-content .content3 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <input type="radio" name="tabs" id="tab1" checked>
+    <input type="radio" name="tabs" id="tab2">
+    <input type="radio" name="tabs" id="tab3">
+
+    <div class="tab-labels">
+      <label for="tab1">Tab1</label>
+      <label for="tab2">Tab2</label>
+      <label for="tab3">Tab3</label>
+    </div>
+
+    <div class="tab-content">
+      <div class="content content1">
+        Conteúdo da Tab1 — texto de exemplo.
+      </div>
+      <div class="content content2">
+        Conteúdo da Tab2 — outro texto de exemplo.
+      </div>
+      <div class="content content3">
+        Conteúdo da Tab3 — mais texto de exemplo.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
